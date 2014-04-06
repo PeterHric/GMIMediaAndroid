@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GMIMedia</string>
+    <string name="action_settings">Radio</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_video__low__mission">Mission TV Low</string>
+    <string name="title_activity_video">Video</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="menu_save">Menu</string>
+    <string name="title_activity_radio">Radio</string>
+    <string name="title_activity_info">Info</string>
+    <string name="linkEmail">Contact Us</string>
+    <string name="emailAddress">info@gospelministry.org</string>
+    <string name="emailSubject">A Message from GMI Android App v1.0</string>
+    <string name="about_gmi">About GMI</string>
+    <string name="website_web">Website</string>
+
+</resources>
