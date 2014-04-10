@@ -25,7 +25,12 @@
         </activity>
         <activity
             android:name="com.gospelministries.gmimedia.Video_Low_Mission"
-            android:label="@string/title_activity_video__low__mission" >
+            android:label="@string/title_activity_video__low__mission">
+            --android:parentActivityName="com.gospelministries.gmimedia.MainActivity" >
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.gospelministries.gmimedia.MainActivity"
+            />
         </activity>
         <activity
             android:name="com.gospelministries.gmimedia.Video"
