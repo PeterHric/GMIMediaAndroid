@@ -21,16 +21,17 @@ public class Video_Low_Mission extends Activity {
 	// Put in your Video URL here
 	//private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/GMIalfal"; // Alfa - Spain - Madrid
     //private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnl/"; // Phillipines
-    private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/lcit"; // Phillipines
+    //private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/lcit"; // Italy
+    private String VideoURL; // To be filled later
 
 	// Declare some variables
 	private ProgressDialog pDialog;
 	VideoView videoview;
 
     private final int TV_NONE_SELECTED = Integer.MAX_VALUE;
-    private int selectedTV          = 0;
+    private int selectedTV             = 0;
 
-    private int selectedResolution  = 0;
+    private int selectedResolution     = 0;
 
     public enum videoResolution
     {
@@ -45,6 +46,15 @@ public class Video_Low_Mission extends Activity {
 
     public void setVideoResolution(videoResolution res) { resolution = res; }
 
+    void fillStreamUrls ()
+    {
+        // Put in your Video stream URLs here
+        //private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/GMIalfal"; // Alfa - Spain - Madrid
+        //private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnl/"; // Phillipines
+        VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/lcit"; // Italy
+
+    }
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -58,6 +68,8 @@ public class Video_Low_Mission extends Activity {
         assert(selectedResolution < videoResolution.UNSUPPORTED_RES.ordinal());
         // Convert to the enum value now
         resolution = videoResolution.values()[selectedResolution];
+
+        fillStreamUrls();
 
 		// Set the layout from video_main.xml
 		setContentView(R.layout.activity_video__low__mission);
@@ -151,7 +163,6 @@ public class Video_Low_Mission extends Activity {
 
 	}
 
-	// Not using options menu for this tutorial
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.video__low__mission, menu);

@@ -21,11 +21,25 @@ import java.util.List;
 public class MainActivity extends Activity {
 
 	
-    private ListView listView1;
+    private ListView tvChannelListView;
     public final static String CHOSEN_TV = "com.gospelministries.gmimedia.TV";
     public final static String CHOSEN_RESOLUTION = "com.gospelministries.gmimedia.RESOLUTION";
 
-    
+    // Static array of channels
+    VideoStream aVideoStreams[];
+    // Dynamic list of channels
+    List<VideoStream> lVideoStreams;
+
+
+    // Should be dynamic and fill only active (i.e. currently on-line) streams
+    void fillListOfStreamUrls ()
+    {
+        // ToDo: Some pseudo-code ideas
+        //while(!staticList.Empty())
+        //        lStreamUrls.add(staticList.element());
+
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,92 +47,152 @@ public class MainActivity extends Activity {
         
         
         setTitle("Gospel Ministries");
-        
-        VideoStream videoStream_data[] = new VideoStream[]
+
+        aVideoStreams = new VideoStream[]
         {
-            new VideoStream(R.drawable.image0, "Mission TV"),
-            new VideoStream(R.drawable.image1, "HCBN Philippines"),
-            new VideoStream(R.drawable.image2, "Global Family Network"),
-            new VideoStream(R.drawable.image3, "2CBN"),
-            new VideoStream(R.drawable.image4, "Red ADvenir"),
-            new VideoStream(R.drawable.image5, "Alfa Television"),
-            new VideoStream(R.drawable.image6, "Light Channel Hungary"),
-            new VideoStream(R.drawable.image7, "Light Channel Rumania"),
-            new VideoStream(R.drawable.image8, "Light Channel Germany"),
-            new VideoStream(R.drawable.image9, "Terceiro Anjo"),
-            new VideoStream(R.drawable.image10, "HCBN Indonesia"),
-            new VideoStream(R.drawable.image11, "TV Famille")
-            
-            
+            new VideoStream(R.drawable.image0, "Mission TV", "rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvl", null, "rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvh"),
+            new VideoStream(R.drawable.image1, "HCBN Philippines", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnl", null, null),
+            new VideoStream(R.drawable.image2, "Global Family Network", null, "rtsp://streamer1.streamhost.org:1935/salive/GMIgfnm", "rtsp://streamer1.streamhost.org:1935/salive/GMIgfnh"),
+            new VideoStream(R.drawable.image3, "2CBN", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnl", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnm", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnh"),
+            new VideoStream(R.drawable.image4, "Red ADvenir", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirl", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirm", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirh"),
+            new VideoStream(R.drawable.image5, "Alfa Television", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfal", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfam", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfah"),
+            new VideoStream(R.drawable.image6, "Light Channel Hungary", null, "rtsp://streamer1.streamhost.org:1935/salive/hungarian", null),
+            new VideoStream(R.drawable.image7, "Light Channel Rumania", null, "rtsp://streamer1.streamhost.org:1935/salive/romanian", null),
+            new VideoStream(R.drawable.image8, "Light Channel Germany", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvde", null),
+            new VideoStream(R.drawable.image9, "Terceiro Anjo", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjol", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjom", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjoh"),
+            new VideoStream(R.drawable.image10, "HCBN Indonesia", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINlow", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINmed", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINhigh"),
+            new VideoStream(R.drawable.image11, "TV Famille","rtsp://streamer1.streamhost.org:1935/salive/GMItvfl", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfm", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfh"),
+            // ToDo: Italian, Dutch, Czech & Slovak
+            new VideoStream(R.drawable.image0, "Dummy for Italy"),
+            new VideoStream(R.drawable.image0, "Dummy for Dutch"),
+            new VideoStream(R.drawable.image0, "Dummy for Slovak & Czech")
             
             
         };
-        
+
         VideoStreamAdapter adapter = new VideoStreamAdapter(this,
-                R.layout.listview_item_row, videoStream_data);
+                R.layout.listview_item_row, aVideoStreams);
         
-        
-        listView1 = (ListView)findViewById(R.id.listView1);
+        tvChannelListView = (ListView)findViewById(R.id.listView1);
          
         View header = getLayoutInflater().inflate(R.layout.listview_header_row, null);
-        listView1.addHeaderView(header);
+        tvChannelListView.addHeaderView(header);
         
-        listView1.setAdapter(adapter);
+        tvChannelListView.setAdapter(adapter);
       
-        listView1.setOnItemClickListener(new OnItemClickListener() {
+        tvChannelListView.setOnItemClickListener(new OnItemClickListener() {
 
-        	
-        	
+
             @Override
-			public void onItemClick(AdapterView <?> parentAdapter, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parentAdapter, View view, final int tvPosition, long id) {
 
-                ArrayList<Boolean> resolOptions = null;
-                int numOptions = 0;
-                switch(position) // ToDo: Link this position to the position in the table (use some DB ?)
+                int[] numOptions = new int[1];
+                numOptions[0] = 0;
+                ArrayList<Boolean> resolOptions = getResOptions(tvPosition, numOptions);
+/*
+                switch (tvPosition) // ToDo: Link this position to the position in the table (use some DB ?)
                 {
-                    case 1: // HMission TV                            Low  ,   Medium   ,  High
-                        resolOptions = new ArrayList<Boolean> () { { add(true); add(true); add(true);} };
+                    case 1: // HMission TV
+                        resolOptions = new ArrayList<Boolean>() {
+                            {
+                                add(aVideoStreams[tvPosition].urlLo != null);
+                                add(aVideoStreams[tvPosition].urlMed != null);
+                                add(aVideoStreams[tvPosition].urlHi != null);
+                            }
+                        };
                         numOptions = 3; // Number of true items
                         break;
 
-                    case 2: // HCBN Philippines                        Low  ,   Medium   ,  High
-                        resolOptions = new ArrayList<Boolean> () { { add(true); add(true); add(false);} };
+                    case 2: // HCBN Philippines
+                        resolOptions = new ArrayList<Boolean>() {
+                            {
+                                add(true);
+                                add(true);
+                                add(false);
+                            }
+                        };
                         numOptions = 2; // Number of true items
                         break;
 
                     case 3: // Global Family Network
-                        resolOptions = new ArrayList<Boolean> () { { add(false); add(false); add(true);} };
+                        resolOptions = new ArrayList<Boolean>() {
+                            {
+                                add(false);
+                                add(false);
+                                add(true);
+                            }
+                        };
                         numOptions = 1; // Number of true items
                         break;
 
                     case 0:
                     default:
                         // do nothing
-                        assert(false);
+                        assert (false);
                         break;
                 } // switch (position)
-
-                if(!resolOptions.isEmpty())
-                    launchVideo( resolOptions , numOptions , position, Video_Low_Mission.class);
+*/
+                if (!resolOptions.isEmpty())
+                    launchVideo(resolOptions, numOptions[0], tvPosition, Video_Low_Mission.class);
 
             }
 
-       });
+        });
         
     }
 
+    ArrayList<Boolean> getResOptions(final int selectedTV, int [] numOptions)
+    {
+        ArrayList<Boolean> resolOptions = new ArrayList<Boolean>() {
+             {
+                add(aVideoStreams[selectedTV].urlLo == null);
+                add(aVideoStreams[selectedTV].urlMed == null);
+                add(aVideoStreams[selectedTV].urlHi == null);
+            }
+        };
+
+        numOptions[0] = 0;
+
+        for (Iterator<Boolean> i = resolOptions.iterator() ; i.hasNext() ; )
+        {
+            boolean element = i.next();
+            if(element)
+                numOptions[0]++;
+        }
+
+        return resolOptions;
+    }
+
+/*
+    int numOptions getResOptionsStrings(final int selectedTV)
+    {
+        int idx = 0;
+        CharSequence[] resOptsItems = new CharSequence[numResOptions];
+        if ( aVideoStreams[selectedTV].urlLo != null )
+            resOptsItems[idx++] = "Low Resolution";
+
+        if ( aVideoStreams[selectedTV].urlMed != null )
+            resOptsItems[idx++] = "Medium Resolution";
+
+        if ( aVideoStreams[selectedTV].urlHi != null )
+            resOptsItems[idx] = "High Resolution";
+
+    }
+*/
 
     private boolean launchVideo (List<Boolean> resolOptions, int numResOptions, final int selectedTV, final Class ministryClass)
     {
+
+        CharSequence[] resOptsItems = new CharSequence[numResOptions];
         final CharSequence[] itemsMuster = {"Low", "Medium", "High"};
-        CharSequence[] itemsQM = new CharSequence[numResOptions];
+
         int idxQM = 0, idxMuster = 0;
         for (Iterator<Boolean> i = resolOptions.iterator() ; i.hasNext() ; )
         {
             boolean element = i.next();
             if(element == true)
             {
-                itemsQM[idxQM] = itemsMuster[idxMuster];
+                resOptsItems[idxQM] = itemsMuster[idxMuster];
                 idxQM += 1;
             }
             idxMuster += 1;
@@ -127,7 +201,7 @@ public class MainActivity extends Activity {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Please choose video quality.");
         //builder.setIcon(R.drawable.image1);
-        builder.setItems(itemsQM, new DialogInterface.OnClickListener() {
+        builder.setItems(resOptsItems, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int selectedResolution) {
 
@@ -171,6 +245,7 @@ public class MainActivity extends Activity {
         alert.show();
         return true;
     }
+
     @Override
     public boolean onKeyDown(int keycode, KeyEvent e) {
         switch(keycode) {
