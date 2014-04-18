@@ -53,23 +53,24 @@ public class MainActivity extends Activity {
         // null denotes, there is no available stream yet with particular resolution
         aVideoStreams = new VideoStream[]
         {
-            new VideoStream(R.drawable.image0, "Mission TV", "rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvl", null, "rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvh"),
-            new VideoStream(R.drawable.image1, "HCBN Philippines", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnl", null, null),
-            new VideoStream(R.drawable.image2, "Global Family Network", null, "rtsp://streamer1.streamhost.org:1935/salive/GMIgfnm", "rtsp://streamer1.streamhost.org:1935/salive/GMIgfnh"),
-            new VideoStream(R.drawable.image3, "2CBN", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnl", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnm", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnh"),
-            new VideoStream(R.drawable.image4, "Red ADvenir", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirl", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirm", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirh"),
-            new VideoStream(R.drawable.image5, "Alfa Television", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfal", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfam", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfah"),
-            new VideoStream(R.drawable.image6, "Light Channel Hungary", null, "rtsp://streamer1.streamhost.org:1935/salive/hungarian", null),
-            new VideoStream(R.drawable.image7, "Light Channel Rumania", null, "rtsp://streamer1.streamhost.org:1935/salive/romanian", null),
-            new VideoStream(R.drawable.image8, "Light Channel Germany", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvde", null),
-            new VideoStream(R.drawable.image9, "Terceiro Anjo", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjol", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjom", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjoh"),
-            new VideoStream(R.drawable.image10, "HCBN Indonesia", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINlow", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINmed", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINhigh"),
-            new VideoStream(R.drawable.image11, "TV Famille","rtsp://streamer1.streamhost.org:1935/salive/GMItvfl", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfm", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfh"),
+            new VideoStream(R.drawable.image0, "Mission TV USA - English", "rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvl", null, "rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvh"),
+            new VideoStream(R.drawable.image1, "HCBN Philippines - English", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnl", null, null),
+            new VideoStream(R.drawable.image2, "Global Family Network Grenada - English", null, "rtsp://streamer1.streamhost.org:1935/salive/GMIgfnm", "rtsp://streamer1.streamhost.org:1935/salive/GMIgfnh"),
+            new VideoStream(R.drawable.image3, "2CBN Kenya - English", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnl", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnm", "rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnh"),
+            new VideoStream(R.drawable.image4, "Red ADvenir Bolivia - Spanish", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirl", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirm", "rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirh"),
+            new VideoStream(R.drawable.image5, "Alfa Television Spain - Spanish", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfal", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfam", "rtsp://streamer1.streamhost.org:1935/salive/GMIalfah"),
+            new VideoStream(R.drawable.image6, "Light Channel Hungary - Hungarian", null, "rtsp://streamer1.streamhost.org:1935/salive/hungarian", null),
+            new VideoStream(R.drawable.image7, "Light Channel Rumania - Romanian", null, "rtsp://streamer1.streamhost.org:1935/salive/romanian", null),
+            new VideoStream(R.drawable.image8, "Light Channel Germany - German", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvde", null),
+            new VideoStream(R.drawable.image9, "Terceiro Anjo Brasil - Portuguese", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjol", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjom", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjoh"),
+            new VideoStream(R.drawable.image10, "HCBN Indonesia - Bahasa Indonesia", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINlow", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINmed", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINhigh"),
+            new VideoStream(R.drawable.image11, "TV Famille France - French","rtsp://streamer1.streamhost.org:1935/salive/GMItvfl", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfm", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfh"),
             // ToDo: Italian, Dutch, Czech & Slovak
-            new VideoStream(R.drawable.image0, "Light Channel Italy", "rtsp://streamer1.streamhost.org:1935/salive/lcit", null, null),
-            new VideoStream(R.drawable.image0, "Light Channel Nederlanden", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLL", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLM", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLH"),
-            new VideoStream(R.drawable.image0, "Light Channel Slovakia", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvcz", null),
-            new VideoStream(R.drawable.image0, "Light Channel Czech Republic", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvcz", null)
+            new VideoStream(R.drawable.image13, "Light Channel Italy - Italian", "rtsp://streamer1.streamhost.org:1935/salive/lcit", null, null),
+            new VideoStream(R.drawable.image14, "Light Channel Slovakia - Music", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvcz", null),
+            new VideoStream(R.drawable.image15, "Light Channel Czech Republic - Music", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvcz", null),
+            new VideoStream(R.drawable.image16, "Light Channel Nederlanden - Dutch", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLL", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLM", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLH"),
+            new VideoStream(R.drawable.image12, "Dummy - Light Channel Venezuela")
         };
 
         VideoStreamAdapter adapter = new VideoStreamAdapter(this,
@@ -92,49 +93,7 @@ public class MainActivity extends Activity {
                 numOptions[0] = 0;
                 int tvArrayIndex = tvPosition-1; // Align position given click and position in the stream arrays
                 ArrayList<Boolean> resolOptions = getResOptions(tvArrayIndex, numOptions);
-/*
-                switch (tvPosition) // ToDo: Link this position to the position in the table (use some DB ?)
-                {
-                    case 1: // HMission TV
-                        resolOptions = new ArrayList<Boolean>() {
-                            {
-                                add(aVideoStreams[tvPosition].urlLo != null);
-                                add(aVideoStreams[tvPosition].urlMed != null);
-                                add(aVideoStreams[tvPosition].urlHi != null);
-                            }
-                        };
-                        numOptions = 3; // Number of true items
-                        break;
 
-                    case 2: // HCBN Philippines
-                        resolOptions = new ArrayList<Boolean>() {
-                            {
-                                add(true);
-                                add(true);
-                                add(false);
-                            }
-                        };
-                        numOptions = 2; // Number of true items
-                        break;
-
-                    case 3: // Global Family Network
-                        resolOptions = new ArrayList<Boolean>() {
-                            {
-                                add(false);
-                                add(false);
-                                add(true);
-                            }
-                        };
-                        numOptions = 1; // Number of true items
-                        break;
-
-                    case 0:
-                    default:
-                        // do nothing
-                        assert (false);
-                        break;
-                } // switch (position)
-*/
                 if (!resolOptions.isEmpty())
                     launchVideo(resolOptions, numOptions[0], tvArrayIndex, Video_Low_Mission.class);
 
@@ -165,23 +124,6 @@ public class MainActivity extends Activity {
 
         return resolOptions;
     }
-
-/*
-    int numOptions getResOptionsStrings(final int selectedTV)
-    {
-        int idx = 0;
-        CharSequence[] resOptsItems = new CharSequence[numResOptions];
-        if ( aVideoStreams[selectedTV].urlLo != null )
-            resOptsItems[idx++] = "Low Resolution";
-
-        if ( aVideoStreams[selectedTV].urlMed != null )
-            resOptsItems[idx++] = "Medium Resolution";
-
-        if ( aVideoStreams[selectedTV].urlHi != null )
-            resOptsItems[idx] = "High Resolution";
-
-    }
-*/
 
     private boolean launchVideo (List<Boolean> resolOptions, int numResOptions, final int selectedTV, final Class ministryClass)
     {
@@ -226,25 +168,6 @@ public class MainActivity extends Activity {
                     selectedStream = aVideoStreams[selectedTV].urlHi;
                 }
 
-/*
-                //switch(resOptsItems[selectedResolution]){
-                switch(selectedResolution){
-
-                    case 0:
-                        selectedStream = aVideoStreams[selectedTV].urlLo;
-                        break;
-                    case 1:
-                        selectedStream = aVideoStreams[selectedTV].urlMed;
-                        break;
-                    case 2:
-                        selectedStream = aVideoStreams[selectedTV].urlHi;
-                        break;
-                    default:
-                        // Must never happen !
-                        assert(false);
-                        break;
-                }
-*/
 
                 intent = new Intent(getApplicationContext(), ministryClass);
                 //Pass video resolution to the new activity
@@ -296,8 +219,7 @@ public class MainActivity extends Activity {
             	    		Intent i = new Intent(getApplicationContext(), Info.class);
             	    		startActivity(i);
             	    	}
-            	    	
-            	    	
+
             	
             	    }
             	});
@@ -342,8 +264,7 @@ public class MainActivity extends Activity {
             case R.id.item_more:
     
             	// Do your ***
-            	
-            	
+
             	
             	final CharSequence[] items = {"TV Stations", "Radio Stations", "Information"};
 
