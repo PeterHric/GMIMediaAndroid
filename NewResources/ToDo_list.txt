@@ -1,0 +1,28 @@
+
+ToDo:
+
+1. While playing video, context menu -> Radio has no effect. Should stop playback and go to radio menu.
+
+2. Add mute button, full screen button
+
+3. When stream is not playable, there is a message sorry can't play, and its dupplicated. After 2xOK it continues to buffer. Should exit instead to menu mode.
+
+4. Dutch channel does not play sound
+
+6. Add Radios.
+
+7. Options of TV/Radio and resolution quality should be dynamic based on actual availability.
+
+8. Localize strings - provide language options.
+
+9. Add "stream filter" button, that would filter and leave only on-line available streams/resolutions.
+
+10. Display correct resolution and channel when streamming
+
+Possible future features:
+
+- Enable user to add own stations (URL and icons)
+
+- Create interface, that would enable updating streams according to given public GMI stream list
+
+- Possibly extend and store the DB to some SQLite, once simple list is insufficient.
