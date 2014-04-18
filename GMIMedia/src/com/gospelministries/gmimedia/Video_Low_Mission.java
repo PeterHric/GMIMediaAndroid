@@ -17,12 +17,9 @@ import android.view.SurfaceHolder;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import java.util.List;
+
 public class Video_Low_Mission extends Activity {
-	// Put in your Video URL here
-	//private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/GMIalfal"; // Alfa - Spain - Madrid
-    //private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnl/"; // Phillipines
-    //private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/lcit"; // Italy
-    private String VideoURL; // To be filled later
 
 	// Declare some variables
 	private ProgressDialog pDialog;
@@ -30,8 +27,9 @@ public class Video_Low_Mission extends Activity {
 
     private final int TV_NONE_SELECTED = Integer.MAX_VALUE;
     private int selectedTV             = 0;
-
     private int selectedResolution     = 0;
+    private List<String> Quality;
+    private String selectedStreamUrl; // To be filled later
 
     public enum videoResolution
     {
@@ -49,10 +47,7 @@ public class Video_Low_Mission extends Activity {
     void fillStreamUrls ()
     {
         // Put in your Video stream URLs here
-        //private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/GMIalfal"; // Alfa - Spain - Madrid
-        //private String VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnl/"; // Phillipines
-        VideoURL = "rtsp://streamer1.streamhost.org:1935/salive/lcit"; // Italy
-
+        selectedStreamUrl = "rtsp://streamer1.streamhost.org:1935/salive/lcit"; // Italy
     }
 
 	@Override
@@ -64,12 +59,14 @@ public class Video_Low_Mission extends Activity {
 
         // Get parameters sent by MainActivity
         selectedTV         = intent.getIntExtra(MainActivity.CHOSEN_TV, TV_NONE_SELECTED);
+        selectedStreamUrl  = intent.getStringExtra(MainActivity.CHOSEN_STREAM);
         selectedResolution = intent.getIntExtra(MainActivity.CHOSEN_RESOLUTION, videoResolution.UNSUPPORTED_RES.ordinal());
+
         assert(selectedResolution < videoResolution.UNSUPPORTED_RES.ordinal());
         // Convert to the enum value now
         resolution = videoResolution.values()[selectedResolution];
 
-        fillStreamUrls();
+        //fillStreamUrls();
 
 		// Set the layout from video_main.xml
 		setContentView(R.layout.activity_video__low__mission);
@@ -111,7 +108,7 @@ public class Video_Low_Mission extends Activity {
 						Video_Low_Mission.this);
                 mediacontroller.setAnchorView(videoview);
 				// Get the URL from String VideoURL
-				Uri video = Uri.parse(VideoURL);
+				Uri video = Uri.parse(selectedStreamUrl);
 				videoview.setMediaController(mediacontroller);
 				videoview.setVideoURI(video);
                 //boolean streamOnLine = mediacontroller.checkInputConnectionProxy(videoview);

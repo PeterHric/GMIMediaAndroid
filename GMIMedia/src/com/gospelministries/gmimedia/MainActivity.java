@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
     private ListView tvChannelListView;
     public final static String CHOSEN_TV = "com.gospelministries.gmimedia.TV";
     public final static String CHOSEN_RESOLUTION = "com.gospelministries.gmimedia.RESOLUTION";
+    public final static String CHOSEN_STREAM = "";
 
     // Static array of channels
     VideoStream aVideoStreams[];
@@ -48,6 +49,8 @@ public class MainActivity extends Activity {
         
         setTitle("Gospel Ministries");
 
+        // Define video streams and their rtsp ULRs with resolution in the following order Low, Medium, High
+        // null denotes, there is no available stream yet with particular resolution
         aVideoStreams = new VideoStream[]
         {
             new VideoStream(R.drawable.image0, "Mission TV", "rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvl", null, "rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvh"),
@@ -63,11 +66,10 @@ public class MainActivity extends Activity {
             new VideoStream(R.drawable.image10, "HCBN Indonesia", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINlow", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINmed", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINhigh"),
             new VideoStream(R.drawable.image11, "TV Famille","rtsp://streamer1.streamhost.org:1935/salive/GMItvfl", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfm", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfh"),
             // ToDo: Italian, Dutch, Czech & Slovak
-            new VideoStream(R.drawable.image0, "Dummy for Italy"),
-            new VideoStream(R.drawable.image0, "Dummy for Dutch"),
-            new VideoStream(R.drawable.image0, "Dummy for Slovak & Czech")
-            
-            
+            new VideoStream(R.drawable.image0, "Light Channel Italy", "rtsp://streamer1.streamhost.org:1935/salive/lcit", null, null),
+            new VideoStream(R.drawable.image0, "Light Channel Nederlanden", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLL", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLM", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLH"),
+            new VideoStream(R.drawable.image0, "Light Channel Slovakia", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvcz", null),
+            new VideoStream(R.drawable.image0, "Light Channel Czech Republic", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvcz", null)
         };
 
         VideoStreamAdapter adapter = new VideoStreamAdapter(this,
@@ -88,7 +90,8 @@ public class MainActivity extends Activity {
 
                 int[] numOptions = new int[1];
                 numOptions[0] = 0;
-                ArrayList<Boolean> resolOptions = getResOptions(tvPosition, numOptions);
+                int tvArrayIndex = tvPosition-1; // Align position given click and position in the stream arrays
+                ArrayList<Boolean> resolOptions = getResOptions(tvArrayIndex, numOptions);
 /*
                 switch (tvPosition) // ToDo: Link this position to the position in the table (use some DB ?)
                 {
@@ -133,7 +136,7 @@ public class MainActivity extends Activity {
                 } // switch (position)
 */
                 if (!resolOptions.isEmpty())
-                    launchVideo(resolOptions, numOptions[0], tvPosition, Video_Low_Mission.class);
+                    launchVideo(resolOptions, numOptions[0], tvArrayIndex, Video_Low_Mission.class);
 
             }
 
@@ -145,9 +148,9 @@ public class MainActivity extends Activity {
     {
         ArrayList<Boolean> resolOptions = new ArrayList<Boolean>() {
              {
-                add(aVideoStreams[selectedTV].urlLo == null);
-                add(aVideoStreams[selectedTV].urlMed == null);
-                add(aVideoStreams[selectedTV].urlHi == null);
+                add(aVideoStreams[selectedTV].urlLo != null);
+                add(aVideoStreams[selectedTV].urlMed != null);
+                add(aVideoStreams[selectedTV].urlHi != null);
             }
         };
 
@@ -183,7 +186,7 @@ public class MainActivity extends Activity {
     private boolean launchVideo (List<Boolean> resolOptions, int numResOptions, final int selectedTV, final Class ministryClass)
     {
 
-        CharSequence[] resOptsItems = new CharSequence[numResOptions];
+        final CharSequence[] resOptsItems = new CharSequence[numResOptions]; // Only available options (i.e. not null)
         final CharSequence[] itemsMuster = {"Low", "Medium", "High"};
 
         int idxQM = 0, idxMuster = 0;
@@ -206,39 +209,54 @@ public class MainActivity extends Activity {
             public void onClick(DialogInterface dialog, int selectedResolution) {
 
                 Intent intent = null;
-                /*
+                String selectedStream = null;
+
+                // Align selectedResolution and the index in aVideoStreams
+                //CharSequence aux = resOptsItems[selectedResolution];
+                if( resOptsItems[selectedResolution].equals(itemsMuster[0]) )
+                {
+                    selectedStream = aVideoStreams[selectedTV].urlLo;
+                }
+                else if (resOptsItems[selectedResolution].equals(itemsMuster[1]) )
+                {
+                    selectedStream = aVideoStreams[selectedTV].urlMed;
+                }
+                else if (resOptsItems[selectedResolution].equals(itemsMuster[2]) )
+                {
+                    selectedStream = aVideoStreams[selectedTV].urlHi;
+                }
+
+/*
+                //switch(resOptsItems[selectedResolution]){
                 switch(selectedResolution){
 
                     case 0:
-                        intent = new Intent(getApplicationContext(), ministryClass);
-                        intent.putExtra("Chosen Resolution", selectedResolution); //intent.setFlags(selectedResolution);
+                        selectedStream = aVideoStreams[selectedTV].urlLo;
                         break;
                     case 1:
-                        //intent = new Intent(getApplicationContext(), Video_Med_Mission.class);
-                        intent = new Intent(getApplicationContext(), ministryClass);
-                        intent.putExtra("Chosen Resolution", selectedResolution); //intent.setFlags(selectedResolution);
+                        selectedStream = aVideoStreams[selectedTV].urlMed;
                         break;
                     case 2:
-                        //intent = new Intent(getApplicationContext(), Video_High_Mission.class);
-                        intent = new Intent(getApplicationContext(), ministryClass);
-                        intent.putExtra("Chosen Resolution", selectedResolution); //intent.setFlags(selectedResolution);
+                        selectedStream = aVideoStreams[selectedTV].urlHi;
                         break;
                     default:
                         // Must never happen !
                         assert(false);
                         break;
                 }
-                */
+*/
 
                 intent = new Intent(getApplicationContext(), ministryClass);
                 //Pass video resolution to the new activity
                 intent.putExtra(CHOSEN_TV, selectedTV); //intent.putExtra("Chosen TV", selectedTV);
+                // Pass selected video stream to the new activity
+                intent.putExtra(CHOSEN_STREAM, selectedStream);
                 //Pass video resolution to the new activity
                 intent.putExtra(CHOSEN_RESOLUTION, selectedResolution); //intent.putExtra("Chosen Resolution", selectedResolution);
 
                 if(intent!=null) startActivity(intent);
             }
-        });
+        }); // builder.setItems()
 
         AlertDialog alert = builder.create();
 
