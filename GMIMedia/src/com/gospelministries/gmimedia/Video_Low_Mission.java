@@ -26,9 +26,9 @@ public class Video_Low_Mission extends Activity {
 	VideoView videoview;
 
     private final int TV_NONE_SELECTED = Integer.MAX_VALUE;
-    private int selectedTV             = 0;
-    private int selectedResolution     = 0;
-    private List<String> Quality;
+    private int selectedTV                     = 0;
+    private String selectedTVName;
+    private videoResolution selectedResolution = videoResolution.UNSUPPORTED_RES;
     private String selectedStreamUrl; // To be filled later
 
     public enum videoResolution
@@ -40,16 +40,6 @@ public class Video_Low_Mission extends Activity {
         UNSUPPORTED_RES
     };
 
-    private videoResolution resolution = videoResolution.UNSUPPORTED_RES;
-
-    public void setVideoResolution(videoResolution res) { resolution = res; }
-
-    void fillStreamUrls ()
-    {
-        // Put in your Video stream URLs here
-        selectedStreamUrl = "rtsp://streamer1.streamhost.org:1935/salive/lcit"; // Italy
-    }
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,19 +49,37 @@ public class Video_Low_Mission extends Activity {
 
         // Get parameters sent by MainActivity
         selectedTV         = intent.getIntExtra(MainActivity.CHOSEN_TV, TV_NONE_SELECTED);
+        selectedTVName     = intent.getStringExtra(MainActivity.CHOSEN_TV_NAME);
         selectedStreamUrl  = intent.getStringExtra(MainActivity.CHOSEN_STREAM);
-        selectedResolution = intent.getIntExtra(MainActivity.CHOSEN_RESOLUTION, videoResolution.UNSUPPORTED_RES.ordinal());
+        int ordinal = intent.getIntExtra(MainActivity.CHOSEN_RESOLUTION, videoResolution.UNSUPPORTED_RES.ordinal());
+        selectedResolution = videoResolution.values()[ordinal];
 
-        assert(selectedResolution < videoResolution.UNSUPPORTED_RES.ordinal());
-        // Convert to the enum value now
-        resolution = videoResolution.values()[selectedResolution];
-
-        //fillStreamUrls();
+        assert(selectedResolution != videoResolution.UNSUPPORTED_RES);
 
 		// Set the layout from video_main.xml
 		setContentView(R.layout.activity_video__low__mission);
 		// Find your VideoView in your video_main.xml layout
 		videoview = (VideoView) findViewById(R.id.VideoView);
+
+        String title = selectedTVName;
+        switch (selectedResolution)
+        {
+            case LOW_RES:
+                title += " Lo";
+                break;
+            case MEDIUM_RES:
+                title += " Med";
+                break;
+            case HIGH_RES:
+                title += " Hi";
+                break;
+            default:
+                assert(false);
+        }
+
+        // Set the activity's window title
+        this.setTitle(title);
+
 		// Execute StreamVideo AsyncTask
 		new StreamVideo().execute();
 	}
@@ -84,8 +92,25 @@ public class Video_Low_Mission extends Activity {
 			super.onPreExecute();
 			// Create a progressbar
 			pDialog = new ProgressDialog(Video_Low_Mission.this);
-			// Set progressbar title
-			pDialog.setTitle("Mission TV (Low Quality)");
+            String title = selectedTVName;
+
+            switch (selectedResolution)
+            {
+                case LOW_RES:
+                    title += " (Low Quality)";
+                    break;
+                case MEDIUM_RES:
+                    title += " (Medium Quality)";
+                    break;
+                case HIGH_RES:
+                    title += " (High Quality)";
+                    break;
+                default:
+                    assert(false);
+            }
+
+            // Set progressbar title
+			pDialog.setTitle(title);
 			// Set progressbar message
 			pDialog.setMessage("Buffering...");
 			pDialog.setIndeterminate(false);
@@ -98,6 +123,7 @@ public class Video_Low_Mission extends Activity {
 			// TODO Auto-generated method stub
 			return null;
 		}
+
 
 		@Override
 		protected void onPostExecute(Void args) {

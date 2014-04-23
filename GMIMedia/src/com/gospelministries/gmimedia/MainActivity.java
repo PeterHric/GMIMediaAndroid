@@ -24,7 +24,8 @@ public class MainActivity extends Activity {
     private ListView tvChannelListView;
     public final static String CHOSEN_TV = "com.gospelministries.gmimedia.TV";
     public final static String CHOSEN_RESOLUTION = "com.gospelministries.gmimedia.RESOLUTION";
-    public final static String CHOSEN_STREAM = "";
+    public final static String CHOSEN_STREAM = "StreamURL";
+    public final static String CHOSEN_TV_NAME = "TV_channel_Title";
 
     // Static array of channels
     VideoStream aVideoStreams[];
@@ -152,6 +153,7 @@ public class MainActivity extends Activity {
 
                 Intent intent = null;
                 String selectedStream = null;
+                String selectedTvName = aVideoStreams[selectedTV].title;;
 
                 // Align selectedResolution and the index in aVideoStreams
                 //CharSequence aux = resOptsItems[selectedResolution];
@@ -170,12 +172,14 @@ public class MainActivity extends Activity {
 
 
                 intent = new Intent(getApplicationContext(), ministryClass);
-                //Pass video resolution to the new activity
-                intent.putExtra(CHOSEN_TV, selectedTV); //intent.putExtra("Chosen TV", selectedTV);
+                // Pass video resolution to the new activity
+                intent.putExtra(CHOSEN_TV, selectedTV);
                 // Pass selected video stream to the new activity
                 intent.putExtra(CHOSEN_STREAM, selectedStream);
-                //Pass video resolution to the new activity
-                intent.putExtra(CHOSEN_RESOLUTION, selectedResolution); //intent.putExtra("Chosen Resolution", selectedResolution);
+                // Pass video resolution to the new activity
+                intent.putExtra(CHOSEN_RESOLUTION, selectedResolution);
+                // Pass TV name to the new activity
+                intent.putExtra(CHOSEN_TV_NAME, selectedTvName);
 
                 if(intent!=null) startActivity(intent);
             }

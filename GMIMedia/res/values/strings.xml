@@ -4,7 +4,6 @@
     <string name="app_name">GMIMedia</string>
     <string name="action_settings">Radio</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_video__low__mission">Mission TV Low</string>
     <string name="title_activity_video">Video</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="menu_save">Menu</string>

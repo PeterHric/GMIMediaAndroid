@@ -24,8 +24,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gospelministries.gmimedia.Video_Low_Mission"
-            android:label="@string/title_activity_video__low__mission">
+            android:name="com.gospelministries.gmimedia.Video_Low_Mission">
+            --android:label="@string/title_activity_video__low__mission">
             --android:parentActivityName="com.gospelministries.gmimedia.MainActivity" >
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
