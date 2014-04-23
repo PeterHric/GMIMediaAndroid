@@ -133,6 +133,7 @@ public class MainActivity extends Activity {
         final CharSequence[] itemsMuster = {"Low", "Medium", "High"};
 
         int idxQM = 0, idxMuster = 0;
+        // Pick correct resolution options, according to available streams
         for (Iterator<Boolean> i = resolOptions.iterator() ; i.hasNext() ; )
         {
             boolean element = i.next();
@@ -149,25 +150,28 @@ public class MainActivity extends Activity {
         //builder.setIcon(R.drawable.image1);
         builder.setItems(resOptsItems, new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int selectedResolution) {
+            public void onClick(DialogInterface dialog, int selectedRow) {
 
                 Intent intent = null;
                 String selectedStream = null;
-                String selectedTvName = aVideoStreams[selectedTV].title;;
+                String selectedTvName = aVideoStreams[selectedTV].title;
 
                 // Align selectedResolution and the index in aVideoStreams
-                //CharSequence aux = resOptsItems[selectedResolution];
-                if( resOptsItems[selectedResolution].equals(itemsMuster[0]) )
+                int selectedResolution = 0;
+                if( resOptsItems[selectedRow].equals(itemsMuster[0]) )
                 {
                     selectedStream = aVideoStreams[selectedTV].urlLo;
+                    selectedResolution = 0;
                 }
-                else if (resOptsItems[selectedResolution].equals(itemsMuster[1]) )
+                else if (resOptsItems[selectedRow].equals(itemsMuster[1]) )
                 {
                     selectedStream = aVideoStreams[selectedTV].urlMed;
+                    selectedResolution = 1;
                 }
-                else if (resOptsItems[selectedResolution].equals(itemsMuster[2]) )
+                else if (resOptsItems[selectedRow].equals(itemsMuster[2]) )
                 {
                     selectedStream = aVideoStreams[selectedTV].urlHi;
+                    selectedResolution = 2;
                 }
 
 

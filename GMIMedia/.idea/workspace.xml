@@ -86,8 +86,11 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="39" selection-start="7414" selection-end="7414" vertical-scroll-proportion="0.55166054" vertical-offset="1656" max-vertical-offset="4981">
-              <folding />
+            <state line="156" column="72" selection-start="8198" selection-end="8198" vertical-scroll-proportion="0.20664206" vertical-offset="2166" max-vertical-offset="5100">
+              <folding>
+                <element signature="e#7904#9649#0" expanded="true" />
+                <element signature="e#9638#9639#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,10 +188,10 @@
         <option value="$PROJECT_DIR$/res/menu/video__low__mission.xml" />
         <option value="$PROJECT_DIR$/../NewResources/ToDo_list.txt" />
         <option value="$PROJECT_DIR$/src/com/gospelministries/gmimedia/VideoStream.java" />
-        <option value="$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/com/gospelministries/gmimedia/Video_Low_Mission.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -606,7 +609,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3236815" sideWeight="0.6423804" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37228543" sideWeight="0.6407119" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37228543" sideWeight="0.6407119" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -674,7 +677,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="56" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5440">
-          <folding />
+          <folding>
+            <element signature="e#7904#9649#0" expanded="true" />
+            <element signature="e#9638#9639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -716,7 +722,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="56" selection-start="1247" selection-end="1247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5440">
-          <folding />
+          <folding>
+            <element signature="e#7904#9649#0" expanded="true" />
+            <element signature="e#9638#9639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,7 +776,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="0" selection-start="4056" selection-end="4056" vertical-scroll-proportion="0.0" vertical-offset="1139" max-vertical-offset="6766">
-          <folding />
+          <folding>
+            <element signature="e#7904#9649#0" expanded="true" />
+            <element signature="e#9638#9639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -811,7 +823,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="212" column="107" selection-start="9331" selection-end="9331" vertical-scroll-proportion="0.0" vertical-offset="3604" max-vertical-offset="6205">
-          <folding />
+          <folding>
+            <element signature="e#7904#9649#0" expanded="true" />
+            <element signature="e#9638#9639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -848,7 +863,10 @@
     <entry file="file://$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="13" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="5202">
-          <folding />
+          <folding>
+            <element signature="e#7904#9649#0" expanded="true" />
+            <element signature="e#9638#9639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1013,8 +1031,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/gospelministries/gmimedia/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="39" selection-start="7414" selection-end="7414" vertical-scroll-proportion="0.55166054" vertical-offset="1656" max-vertical-offset="4981">
-          <folding />
+        <state line="156" column="72" selection-start="8198" selection-end="8198" vertical-scroll-proportion="0.20664206" vertical-offset="2166" max-vertical-offset="5100">
+          <folding>
+            <element signature="e#7904#9649#0" expanded="true" />
+            <element signature="e#9638#9639#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
