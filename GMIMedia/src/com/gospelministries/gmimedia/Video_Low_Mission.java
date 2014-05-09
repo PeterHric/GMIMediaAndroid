@@ -12,8 +12,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.SurfaceHolder;
+import android.view.*;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -162,6 +161,9 @@ public class Video_Low_Mission extends Activity {
 
                     // show it
                     alertDialog.show();
+
+                    //cancel async task
+                    this.cancel(true);
                     return;
                 }
 
@@ -182,9 +184,25 @@ public class Video_Low_Mission extends Activity {
 				e.printStackTrace();
 			}
 
+
 		}
 
-	}
+	} // private class StreamVideo extends AsyncTask<Void, Void, Void> {
+
+    public void fullScreenClicked (View v) {
+        Window w = getWindow();
+
+        //Window winHnd = this.getWindow();
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        w.setFlags(w.getAttributes().FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
+    public void muteClicked (View v) {
+        //Window w = getWindow();
+        //Window winHnd = this.getWindow();
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //w.setFlags(w.getAttributes()., WindowManager.LayoutParams);
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

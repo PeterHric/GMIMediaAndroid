@@ -4,18 +4,21 @@
             android:id="@+id/FullScreen"
             android:orderInCategory="100"
             android:showAsAction="never"
-            android:title="Full screen"/>
+            android:onClick="fullScreenClicked"
+            android:title="@string/fullScreen" />
+
 
     <item
             android:id="@+id/MuteAudio"
-            android:orderInCategory="100"
+            android:orderInCategory="200"
             android:showAsAction="never"
-            android:title="Mute audio"/>
+            android:onClick="muteAudioClicked"
+            android:title="@string/muteAudio" />
 
     <item
         android:id="@+id/action_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="300"
         android:showAsAction="never"
-        android:title="Radio"/>
+        android:title="@string/radio" />
 
 </menu>

@@ -15,4 +15,9 @@
     <string name="about_gmi">About GMI</string>
     <string name="website_web">Website</string>
 
+    <!-- Video streaming context menu -->
+    <string name="fullScreen">Full Screen</string>
+    <string name="muteAudio">Mute Audio</string>
+    <string name="radio">Radio</string>
+
 </resources>
