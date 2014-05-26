@@ -66,12 +66,12 @@ public class MainActivity extends Activity {
             new VideoStream(R.drawable.image9, "Terceiro Anjo Brasil - Portuguese", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjol", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjom", "rtsp://streamer1.streamhost.org:1935/salive/GMI3anjoh"),
             new VideoStream(R.drawable.image10, "HCBN Indonesia - Bahasa Indonesia", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINlow", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINmed", "rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINhigh"),
             new VideoStream(R.drawable.image11, "TV Famille France - French","rtsp://streamer1.streamhost.org:1935/salive/GMItvfl", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfm", "rtsp://streamer1.streamhost.org:1935/salive/GMItvfh"),
-            // ToDo: Italian, Dutch, Czech & Slovak
             new VideoStream(R.drawable.image13, "Light Channel Italy - Italian", "rtsp://streamer1.streamhost.org:1935/salive/lcit", null, null),
             new VideoStream(R.drawable.image14, "Light Channel Slovakia - Music", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvcz", null),
             new VideoStream(R.drawable.image15, "Light Channel Czech Republic - Music", null, "rtsp://streamer1.streamhost.org:1935/salive/lctvcz", null),
             new VideoStream(R.drawable.image16, "Light Channel Nederlanden - Dutch", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLL", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLM", "rtsp://streamer1.streamhost.org:1935/salive/GMILightNLH"),
-            new VideoStream(R.drawable.image12, "Dummy - Light Channel Venezuela")
+            // ToDo:
+            //new VideoStream(R.drawable.image12, "Dummy - Light Channel Venezuela")
         };
 
         VideoStreamAdapter adapter = new VideoStreamAdapter(this,

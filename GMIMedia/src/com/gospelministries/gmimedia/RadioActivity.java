@@ -19,8 +19,6 @@ public class RadioActivity extends Activity {
 	
     private ListView listView1;
 
-
-    
     
     @Override
     public void onCreate(Bundle savedInstanceState) {

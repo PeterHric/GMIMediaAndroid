@@ -22,7 +22,7 @@ public class Video_Low_Mission extends Activity {
 
 	// Declare some variables
 	private ProgressDialog pDialog;
-	VideoView videoview;
+    VideoView videoview;
 
     private final int TV_NONE_SELECTED = Integer.MAX_VALUE;
     private int selectedTV                     = 0;
@@ -37,7 +37,8 @@ public class Video_Low_Mission extends Activity {
         HIGH_RES   ,
 
         UNSUPPORTED_RES
-    };
+    }
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -169,12 +170,12 @@ public class Video_Low_Mission extends Activity {
 
 				videoview.requestFocus();
 				videoview.setOnPreparedListener(new OnPreparedListener() {
-					// Close the progress bar and play the video
-					public void onPrepared(MediaPlayer mp) {
-						pDialog.dismiss();
-						videoview.start();
-					}
-				});
+                    // Close the progress bar and play the video
+                    public void onPrepared(MediaPlayer mp) {
+                        pDialog.dismiss();
+                        videoview.start();
+                    }
+                });
 			} catch (Exception e) {
 				pDialog.dismiss();
 				
@@ -189,7 +190,14 @@ public class Video_Low_Mission extends Activity {
 
 	} // private class StreamVideo extends AsyncTask<Void, Void, Void> {
 
-    public void fullScreenClicked (View v) {
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.video__low__mission, menu);
+		return super.onCreateOptionsMenu(menu);
+        //return true;
+	}
+
+    public void fullScreenClicked () {
         Window w = getWindow();
 
         //Window winHnd = this.getWindow();
@@ -197,17 +205,11 @@ public class Video_Low_Mission extends Activity {
         w.setFlags(w.getAttributes().FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
-    public void muteClicked (View v) {
+    public void muteClicked () {
         //Window w = getWindow();
         //Window winHnd = this.getWindow();
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
         //w.setFlags(w.getAttributes()., WindowManager.LayoutParams);
     }
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.video__low__mission, menu);
-		return true;
-	}
 
 }

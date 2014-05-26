@@ -3,16 +3,13 @@
     <item
             android:id="@+id/FullScreen"
             android:orderInCategory="100"
-            android:showAsAction="never"
-            android:onClick="fullScreenClicked"
+            android:singleLine="true"
             android:title="@string/fullScreen" />
-
 
     <item
             android:id="@+id/MuteAudio"
             android:orderInCategory="200"
-            android:showAsAction="never"
-            android:onClick="muteAudioClicked"
+            android:singleLine="true"
             android:title="@string/muteAudio" />
 
     <item
