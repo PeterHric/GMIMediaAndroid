@@ -20,7 +20,7 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-	
+
     private ListView tvChannelListView;
     public final static String CHOSEN_TV = "com.gospelministries.gmimedia.TV";
     public final static String CHOSEN_RESOLUTION = "com.gospelministries.gmimedia.RESOLUTION";
@@ -46,8 +46,8 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
-        
+
+
         setTitle("Gospel Ministries");
 
         // Define video streams and their rtsp ULRs with resolution in the following order Low, Medium, High
@@ -76,14 +76,14 @@ public class MainActivity extends Activity {
 
         VideoStreamAdapter adapter = new VideoStreamAdapter(this,
                 R.layout.listview_item_row, aVideoStreams);
-        
+
         tvChannelListView = (ListView)findViewById(R.id.listView1);
-         
+
         View header = getLayoutInflater().inflate(R.layout.listview_header_row, null);
         tvChannelListView.addHeaderView(header);
-        
+
         tvChannelListView.setAdapter(adapter);
-      
+
         tvChannelListView.setOnItemClickListener(new OnItemClickListener() {
 
 
@@ -101,7 +101,7 @@ public class MainActivity extends Activity {
             }
 
         });
-        
+
     }
 
     ArrayList<Boolean> getResOptions(final int selectedTV, int [] numOptions)
@@ -200,7 +200,7 @@ public class MainActivity extends Activity {
         switch(keycode) {
             case KeyEvent.KEYCODE_MENU:
                 // Do SOMETHING
-            	
+
             	final CharSequence[] items = {"TV Stations", "Radio Stations", "About GMI"};
 
             	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -209,71 +209,71 @@ public class MainActivity extends Activity {
             	builder.setItems(items, new DialogInterface.OnClickListener() {
             	    @Override
 					public void onClick(DialogInterface dialog, int item) {
-            	    	
+
             	    	if(item == 0){
-            	    		
+
             	    		//Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
             	    		Intent i = new Intent(getApplicationContext(), MainActivity.class);
             	    		startActivity(i);
             	    	}
             	    	else if(item == 1){
-            	    	
+
             	    		Intent i = new Intent(getApplicationContext(), RadioActivity.class);
             	    		startActivity(i);
             	    	}
             	    	else if(item == 2){
-            	    		
-            	    		
+
+
             	    		Intent i = new Intent(getApplicationContext(), Info.class);
             	    		startActivity(i);
             	    	}
 
-            	
+
             	    }
             	});
             	AlertDialog alert = builder.create();
 
             	alert.show();
-            	
+
                 return true;
         }
 
         return super.onKeyDown(keycode, e);
-        
-        
-        
+
+
+
     }
-     
-    
+
+
     @Override
-    
+
         public boolean onCreateOptionsMenu(Menu menu) {
-    
+
             // use an inflater to populate the ActionBar with items
-    
+
             MenuInflater inflater = getMenuInflater();
-    
+
             inflater.inflate(R.menu.main, menu);
-    
+
            return true;
-    
+
         }
-    
-         
-    
+
+
+
         @Override
-    
+
         public boolean onOptionsItemSelected(MenuItem item){
-    
+
             // same as using a normal menu
-    
+
             switch(item.getItemId()) {
-    
+
             case R.id.item_more:
-    
+
             	// Do your ***
 
-            	
+
             	final CharSequence[] items = {"TV Stations", "Radio Stations", "Information"};
 
             	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
@@ -282,41 +282,41 @@ public class MainActivity extends Activity {
             	builder.setItems(items, new DialogInterface.OnClickListener() {
             	    @Override
 					public void onClick(DialogInterface dialog, int item) {
-            	    	
+
             	    	if(item == 0){
-            	    		
+
             	    		//Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
             	    		Intent i = new Intent(getApplicationContext(), MainActivity.class);
             	    		startActivity(i);
             	    	}
             	    	else if(item == 1){
-            	    	
+
             	    		Intent i = new Intent(getApplicationContext(), RadioActivity.class);
             	    		startActivity(i);
             	    	}
             	    	if(item == 2){
-            	    		
-            	    		
+
+
             	    		Intent i = new Intent(getApplicationContext(), Info.class);
             	    		startActivity(i);
             	    	}
-            	    	
-            	    	
-            	
+
+
+
             	    }
             	});
             	AlertDialog alert = builder.create();
 
             	alert.show();
-            	
-               
+
+
                 break;
-           }   
+           }
 
             return true;
         }
-    
-         
-    
-       
+
+
+
+
 }

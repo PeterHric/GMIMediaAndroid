@@ -83,7 +83,7 @@ public class Video_Low_Mission extends Activity {
 		// Execute StreamVideo AsyncTask
 		new StreamVideo().execute();
 	}
-	
+
 
 	// StreamVideo AsyncTask
 	private class StreamVideo extends AsyncTask<Void, Void, Void> {
@@ -178,9 +178,9 @@ public class Video_Low_Mission extends Activity {
                 });
 			} catch (Exception e) {
 				pDialog.dismiss();
-				
+
 				// Error Here
-				
+
 				Log.e("Video_Low_Mission.onPostExecute() Error: ", e.getMessage());
 				e.printStackTrace();
 			}

@@ -2,7 +2,7 @@ package com.gospelministries.gmimedia;
 
 public class VideoStream {
 
-	
+
 	public int icon;
     public String title;
     public String urlHi  = null; // High resolution
@@ -11,7 +11,7 @@ public class VideoStream {
     public VideoStream(){
         super();
     }
-    
+
     public VideoStream(int icon, String title, String lo, String med, String hi )  {
         super();
         this.icon   = icon;
@@ -26,6 +26,6 @@ public class VideoStream {
         this.icon   = icon;
         this.title  = title;
     }
-	
+
 }
 
