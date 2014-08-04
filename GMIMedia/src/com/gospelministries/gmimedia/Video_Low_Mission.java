@@ -20,8 +20,8 @@ import java.util.List;
 
 public class Video_Low_Mission extends Activity {
 
-	// Declare some variables
-	private ProgressDialog pDialog;
+    // Declare some variables
+    private ProgressDialog pDialog;
     VideoView videoview;
 
     private final int TV_NONE_SELECTED = Integer.MAX_VALUE;
@@ -40,9 +40,9 @@ public class Video_Low_Mission extends Activity {
     }
 
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         // Get the extra messages sent from the parent activity
         Intent intent = getIntent();
@@ -56,10 +56,10 @@ public class Video_Low_Mission extends Activity {
 
         assert(selectedResolution != videoResolution.UNSUPPORTED_RES);
 
-		// Set the layout from video_main.xml
-		setContentView(R.layout.activity_video__low__mission);
-		// Find your VideoView in your video_main.xml layout
-		videoview = (VideoView) findViewById(R.id.VideoView);
+        // Set the layout from video_main.xml
+        setContentView(R.layout.activity_video__low__mission);
+        // Find your VideoView in your video_main.xml layout
+        videoview = (VideoView) findViewById(R.id.VideoView);
 
         String title = selectedTVName;
         switch (selectedResolution)
@@ -80,18 +80,18 @@ public class Video_Low_Mission extends Activity {
         // Set the activity's window title
         this.setTitle(title);
 
-		// Execute StreamVideo AsyncTask
-		new StreamVideo().execute();
-	}
+        // Execute StreamVideo AsyncTask
+        new StreamVideo().execute();
+    }
 
 
-	// StreamVideo AsyncTask
-	private class StreamVideo extends AsyncTask<Void, Void, Void> {
-		@Override
-		protected void onPreExecute() {
-			super.onPreExecute();
-			// Create a progressbar
-			pDialog = new ProgressDialog(Video_Low_Mission.this);
+    // StreamVideo AsyncTask
+    private class StreamVideo extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // Create a progressbar
+            pDialog = new ProgressDialog(Video_Low_Mission.this);
             String title = selectedTVName;
 
             switch (selectedResolution)
@@ -110,33 +110,33 @@ public class Video_Low_Mission extends Activity {
             }
 
             // Set progressbar title
-			pDialog.setTitle(title);
-			// Set progressbar message
-			pDialog.setMessage("Buffering...");
-			pDialog.setIndeterminate(false);
-			// Show progressbar
-			pDialog.show();
-		}
+            pDialog.setTitle(title);
+            // Set progressbar message
+            pDialog.setMessage("Buffering...");
+            pDialog.setIndeterminate(false);
+            // Show progressbar
+            pDialog.show();
+        }
 
-		@Override
-		protected Void doInBackground(Void... params) {
-			// TODO Auto-generated method stub
-			return null;
-		}
+        @Override
+        protected Void doInBackground(Void... params) {
+            // TODO Auto-generated method stub
+            return null;
+        }
 
 
-		@Override
-		protected void onPostExecute(Void args) {
+        @Override
+        protected void onPostExecute(Void args) {
 
-			try {
-				// Start the MediaController
-				MediaController mediacontroller = new MediaController(
-						Video_Low_Mission.this);
+            try {
+                // Start the MediaController
+                MediaController mediacontroller = new MediaController(
+                        Video_Low_Mission.this);
                 mediacontroller.setAnchorView(videoview);
-				// Get the URL from String VideoURL
-				Uri video = Uri.parse(selectedStreamUrl);
-				videoview.setMediaController(mediacontroller);
-				videoview.setVideoURI(video);
+                // Get the URL from String VideoURL
+                Uri video = Uri.parse(selectedStreamUrl);
+                videoview.setMediaController(mediacontroller);
+                videoview.setVideoURI(video);
                 //boolean streamOnLine = mediacontroller.checkInputConnectionProxy(videoview);
                 boolean streamOnLine = true;
                 if(!streamOnLine)
@@ -168,34 +168,34 @@ public class Video_Low_Mission extends Activity {
                     return;
                 }
 
-				videoview.requestFocus();
-				videoview.setOnPreparedListener(new OnPreparedListener() {
+                videoview.requestFocus();
+                videoview.setOnPreparedListener(new OnPreparedListener() {
                     // Close the progress bar and play the video
                     public void onPrepared(MediaPlayer mp) {
                         pDialog.dismiss();
                         videoview.start();
                     }
                 });
-			} catch (Exception e) {
-				pDialog.dismiss();
+            } catch (Exception e) {
+                pDialog.dismiss();
 
-				// Error Here
+                // Error Here
 
-				Log.e("Video_Low_Mission.onPostExecute() Error: ", e.getMessage());
-				e.printStackTrace();
-			}
+                Log.e("Video_Low_Mission.onPostExecute() Error: ", e.getMessage());
+                e.printStackTrace();
+            }
 
 
-		}
+        }
 
-	} // private class StreamVideo extends AsyncTask<Void, Void, Void> {
+    } // private class StreamVideo extends AsyncTask<Void, Void, Void> {
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.video__low__mission, menu);
-		return super.onCreateOptionsMenu(menu);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.video__low__mission, menu);
+        return super.onCreateOptionsMenu(menu);
         //return true;
-	}
+    }
 
     public void fullScreenClicked () {
         Window w = getWindow();

@@ -3,7 +3,7 @@ package com.gospelministries.gmimedia;
 public class VideoStream {
 
 
-	public int icon;
+    public int icon;
     public String title;
     public String urlHi  = null; // High resolution
     public String urlMed = null; // Medium resolution
@@ -28,4 +28,3 @@ public class VideoStream {
     }
 
 }
-

@@ -201,39 +201,39 @@ public class MainActivity extends Activity {
             case KeyEvent.KEYCODE_MENU:
                 // Do SOMETHING
 
-            	final CharSequence[] items = {"TV Stations", "Radio Stations", "About GMI"};
+                final CharSequence[] items = {"TV Stations", "Radio Stations", "About GMI"};
 
-            	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            	builder.setTitle("Menu");
-            	//builder.setIcon(R.drawable.image1);
-            	builder.setItems(items, new DialogInterface.OnClickListener() {
-            	    @Override
-					public void onClick(DialogInterface dialog, int item) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Menu");
+                //builder.setIcon(R.drawable.image1);
+                builder.setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
 
-            	    	if(item == 0){
+                        if(item == 0){
 
-            	    		//Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
-            	    		Intent i = new Intent(getApplicationContext(), MainActivity.class);
-            	    		startActivity(i);
-            	    	}
-            	    	else if(item == 1){
+                            //Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(i);
+                        }
+                        else if(item == 1){
 
-            	    		Intent i = new Intent(getApplicationContext(), RadioActivity.class);
-            	    		startActivity(i);
-            	    	}
-            	    	else if(item == 2){
-
-
-            	    		Intent i = new Intent(getApplicationContext(), Info.class);
-            	    		startActivity(i);
-            	    	}
+                            Intent i = new Intent(getApplicationContext(), RadioActivity.class);
+                            startActivity(i);
+                        }
+                        else if(item == 2){
 
 
-            	    }
-            	});
-            	AlertDialog alert = builder.create();
+                            Intent i = new Intent(getApplicationContext(), Info.class);
+                            startActivity(i);
+                        }
 
-            	alert.show();
+
+                    }
+                });
+                AlertDialog alert = builder.create();
+
+                alert.show();
 
                 return true;
         }
@@ -271,43 +271,43 @@ public class MainActivity extends Activity {
 
             case R.id.item_more:
 
-            	// Do your ***
+                // Do your ***
 
 
-            	final CharSequence[] items = {"TV Stations", "Radio Stations", "Information"};
+                final CharSequence[] items = {"TV Stations", "Radio Stations", "Information"};
 
-            	AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            	builder.setTitle("Menu");
-            	//builder.setIcon(R.drawable.image1);
-            	builder.setItems(items, new DialogInterface.OnClickListener() {
-            	    @Override
-					public void onClick(DialogInterface dialog, int item) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle("Menu");
+                //builder.setIcon(R.drawable.image1);
+                builder.setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
 
-            	    	if(item == 0){
+                        if(item == 0){
 
-            	    		//Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
-            	    		Intent i = new Intent(getApplicationContext(), MainActivity.class);
-            	    		startActivity(i);
-            	    	}
-            	    	else if(item == 1){
+                            //Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(i);
+                        }
+                        else if(item == 1){
 
-            	    		Intent i = new Intent(getApplicationContext(), RadioActivity.class);
-            	    		startActivity(i);
-            	    	}
-            	    	if(item == 2){
-
-
-            	    		Intent i = new Intent(getApplicationContext(), Info.class);
-            	    		startActivity(i);
-            	    	}
+                            Intent i = new Intent(getApplicationContext(), RadioActivity.class);
+                            startActivity(i);
+                        }
+                        if(item == 2){
 
 
+                            Intent i = new Intent(getApplicationContext(), Info.class);
+                            startActivity(i);
+                        }
 
-            	    }
-            	});
-            	AlertDialog alert = builder.create();
 
-            	alert.show();
+
+                    }
+                });
+                AlertDialog alert = builder.create();
+
+                alert.show();
 
 
                 break;

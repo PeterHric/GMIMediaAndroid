@@ -51,65 +51,65 @@ public class RadioActivity extends Activity {
         listView1.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
-			public void onItemClick(AdapterView <?> parentAdapter, View view, int position,
+            public void onItemClick(AdapterView <?> parentAdapter, View view, int position,
                                     long id) {
 
 
-            	if(position == 0){
+                if(position == 0){
 
-            		// NOTHING
+                    // NOTHING
 
-    	    	}
-            	if(position == 1){
+                }
+                if(position == 1){
 
-            		final CharSequence[] itemsQM = {"Low", "Medium", "High"};
+                    final CharSequence[] itemsQM = {"Low", "Medium", "High"};
 
-                	AlertDialog.Builder builder = new AlertDialog.Builder(RadioActivity.this);
-                	builder.setTitle("Select ");
-                	//builder.setIcon(R.drawable.image1);
-                	builder.setItems(itemsQM, new DialogInterface.OnClickListener() {
-                	    @Override
-						public void onClick(DialogInterface dialog, int itemMissionTV) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(RadioActivity.this);
+                    builder.setTitle("Select ");
+                    //builder.setIcon(R.drawable.image1);
+                    builder.setItems(itemsQM, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int itemMissionTV) {
 
-                	    	if(itemMissionTV == 0){
+                            if(itemMissionTV == 0){
 
-                	    		Intent i = new Intent(getApplicationContext(), Video_Low_Mission.class);
-                	    		startActivity(i);
+                                Intent i = new Intent(getApplicationContext(), Video_Low_Mission.class);
+                                startActivity(i);
 
-                	    	}
-                	    	else if(itemMissionTV == 1){
-
-
-                	    	}
-                	    	if(itemMissionTV == 2){
+                            }
+                            else if(itemMissionTV == 1){
 
 
-
-                	    	}
+                            }
+                            if(itemMissionTV == 2){
 
 
 
-                	    }
-                	});
-                	AlertDialog alert = builder.create();
-
-                	alert.show();
+                            }
 
 
 
-    	    	}
-            	if(position == 2){
+                        }
+                    });
+                    AlertDialog alert = builder.create();
+
+                    alert.show();
 
 
-            	}
-            	if(position == 3){
+
+                }
+                if(position == 2){
 
 
-            	}
-            	if(position == 4){
+                }
+                if(position == 3){
 
 
-            	}
+                }
+                if(position == 4){
+
+
+                }
 
 
             }
@@ -125,40 +125,40 @@ public class RadioActivity extends Activity {
             case KeyEvent.KEYCODE_MENU:
                 // Do SOMETHING
 
-            	final CharSequence[] items = {"TV Stations", "Radio Stations", "Information"};
+                final CharSequence[] items = {"TV Stations", "Radio Stations", "Information"};
 
-            	AlertDialog.Builder builder = new AlertDialog.Builder(RadioActivity.this);
-            	builder.setTitle("Menu");
-            	//builder.setIcon(R.drawable.image1);
-            	builder.setItems(items, new DialogInterface.OnClickListener() {
-            	    @Override
-					public void onClick(DialogInterface dialog, int item) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(RadioActivity.this);
+                builder.setTitle("Menu");
+                //builder.setIcon(R.drawable.image1);
+                builder.setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
 
-            	    	if(item == 0){
+                        if(item == 0){
 
-            	    		//Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
-            	    		Intent i = new Intent(getApplicationContext(), MainActivity.class);
-            	    		startActivity(i);
-            	    	}
-            	    	else if(item == 1){
+                            //Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(i);
+                        }
+                        else if(item == 1){
 
-            	    		Intent i = new Intent(getApplicationContext(), RadioActivity.class);
-            	    		startActivity(i);
-            	    	}
-            	    	if(item == 2){
+                            Intent i = new Intent(getApplicationContext(), RadioActivity.class);
+                            startActivity(i);
+                        }
+                        if(item == 2){
 
-            	    		Intent i = new Intent(getApplicationContext(), Info.class);
-            	    		startActivity(i);
+                            Intent i = new Intent(getApplicationContext(), Info.class);
+                            startActivity(i);
 
-            	    	}
+                        }
 
 
 
-            	    }
-            	});
-            	AlertDialog alert = builder.create();
+                    }
+                });
+                AlertDialog alert = builder.create();
 
-            	alert.show();
+                alert.show();
 
                 return true;
         }
@@ -196,44 +196,44 @@ public class RadioActivity extends Activity {
 
             case R.id.item_more:
 
-            	// Do your ***
+                // Do your ***
 
 
 
-            	final CharSequence[] items = {"TV Stations", "Radio Stations", "Information"};
+                final CharSequence[] items = {"TV Stations", "Radio Stations", "Information"};
 
-            	AlertDialog.Builder builder = new AlertDialog.Builder(RadioActivity.this);
-            	builder.setTitle("Menu");
-            	//builder.setIcon(R.drawable.image1);
-            	builder.setItems(items, new DialogInterface.OnClickListener() {
-            	    @Override
-					public void onClick(DialogInterface dialog, int item) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(RadioActivity.this);
+                builder.setTitle("Menu");
+                //builder.setIcon(R.drawable.image1);
+                builder.setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int item) {
 
 if(item == 0){
 
-            	    		//Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
-            	    		Intent i = new Intent(getApplicationContext(), MainActivity.class);
-            	    		startActivity(i);
-            	    	}
-            	    	else if(item == 1){
+                            //Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
+                            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(i);
+                        }
+                        else if(item == 1){
 
-            	    		Intent i = new Intent(getApplicationContext(), RadioActivity.class);
-            	    		startActivity(i);
-            	    	}
-            	    	if(item == 2){
+                            Intent i = new Intent(getApplicationContext(), RadioActivity.class);
+                            startActivity(i);
+                        }
+                        if(item == 2){
 
-            	    		Intent i = new Intent(getApplicationContext(), Info.class);
-            	    		startActivity(i);
+                            Intent i = new Intent(getApplicationContext(), Info.class);
+                            startActivity(i);
 
-            	    	}
+                        }
 
 
 
-            	    }
-            	});
-            	AlertDialog alert = builder.create();
+                    }
+                });
+                AlertDialog alert = builder.create();
 
-            	alert.show();
+                alert.show();
 
 
                 break;
