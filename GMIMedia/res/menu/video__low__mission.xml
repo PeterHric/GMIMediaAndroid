@@ -1,21 +1,21 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-            android:id="@+id/FullScreen"
-            android:orderInCategory="100"
-            android:singleLine="true"
-            android:title="@string/fullScreen" />
+        android:id="@+id/FullScreen"
+        android:orderInCategory="100"
+        android:singleLine="true"
+        android:title="@string/fullScreen"/>
 
     <item
-            android:id="@+id/MuteAudio"
-            android:orderInCategory="200"
-            android:singleLine="true"
-            android:title="@string/muteAudio" />
+        android:id="@+id/MuteAudio"
+        android:orderInCategory="200"
+        android:singleLine="true"
+        android:title="@string/muteAudio"/>
 
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="300"
         android:showAsAction="never"
-        android:title="@string/radio" />
+        android:title="@string/radio"/>
 
 </menu>

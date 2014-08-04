@@ -1,6 +1,5 @@
 package com.gospelministries.gmimedia;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -12,33 +11,23 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.*;
+import android.view.Menu;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-import java.util.List;
-
 public class Video_Low_Mission extends Activity {
 
+    private final static int TV_NONE_SELECTED = Integer.MAX_VALUE;
+
+    VideoView videoview;
     // Declare some variables
     private ProgressDialog pDialog;
-    VideoView videoview;
-
-    private final int TV_NONE_SELECTED = Integer.MAX_VALUE;
-    private int selectedTV                     = 0;
+    private int selectedTV = 0;
     private String selectedTVName;
     private videoResolution selectedResolution = videoResolution.UNSUPPORTED_RES;
     private String selectedStreamUrl; // To be filled later
-
-    public enum videoResolution
-    {
-        LOW_RES    ,
-        MEDIUM_RES ,
-        HIGH_RES   ,
-
-        UNSUPPORTED_RES
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +37,13 @@ public class Video_Low_Mission extends Activity {
         Intent intent = getIntent();
 
         // Get parameters sent by MainActivity
-        selectedTV         = intent.getIntExtra(MainActivity.CHOSEN_TV, TV_NONE_SELECTED);
-        selectedTVName     = intent.getStringExtra(MainActivity.CHOSEN_TV_NAME);
-        selectedStreamUrl  = intent.getStringExtra(MainActivity.CHOSEN_STREAM);
+        selectedTV = intent.getIntExtra(MainActivity.CHOSEN_TV, TV_NONE_SELECTED);
+        selectedTVName = intent.getStringExtra(MainActivity.CHOSEN_TV_NAME);
+        selectedStreamUrl = intent.getStringExtra(MainActivity.CHOSEN_STREAM);
         int ordinal = intent.getIntExtra(MainActivity.CHOSEN_RESOLUTION, videoResolution.UNSUPPORTED_RES.ordinal());
         selectedResolution = videoResolution.values()[ordinal];
 
-        assert(selectedResolution != videoResolution.UNSUPPORTED_RES);
+        assert (selectedResolution != videoResolution.UNSUPPORTED_RES);
 
         // Set the layout from video_main.xml
         setContentView(R.layout.activity_video__low__mission);
@@ -62,8 +51,7 @@ public class Video_Low_Mission extends Activity {
         videoview = (VideoView) findViewById(R.id.VideoView);
 
         String title = selectedTVName;
-        switch (selectedResolution)
-        {
+        switch (selectedResolution) {
             case LOW_RES:
                 title += " Lo";
                 break;
@@ -74,7 +62,7 @@ public class Video_Low_Mission extends Activity {
                 title += " Hi";
                 break;
             default:
-                assert(false);
+                assert (false);
         }
 
         // Set the activity's window title
@@ -84,6 +72,35 @@ public class Video_Low_Mission extends Activity {
         new StreamVideo().execute();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.video__low__mission, menu);
+        return super.onCreateOptionsMenu(menu);
+        //return true;
+    }
+
+    public void fullScreenClicked() {
+        Window w = getWindow();
+
+        //Window winHnd = this.getWindow();
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        w.setFlags(w.getAttributes().FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
+    public void muteClicked() {
+        //Window w = getWindow();
+        //Window winHnd = this.getWindow();
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //w.setFlags(w.getAttributes()., WindowManager.LayoutParams);
+    }
+
+    public enum videoResolution {
+        LOW_RES,
+        MEDIUM_RES,
+        HIGH_RES,
+
+        UNSUPPORTED_RES
+    }
 
     // StreamVideo AsyncTask
     private class StreamVideo extends AsyncTask<Void, Void, Void> {
@@ -94,8 +111,7 @@ public class Video_Low_Mission extends Activity {
             pDialog = new ProgressDialog(Video_Low_Mission.this);
             String title = selectedTVName;
 
-            switch (selectedResolution)
-            {
+            switch (selectedResolution) {
                 case LOW_RES:
                     title += " (Low Quality)";
                     break;
@@ -106,7 +122,7 @@ public class Video_Low_Mission extends Activity {
                     title += " (High Quality)";
                     break;
                 default:
-                    assert(false);
+                    assert (false);
             }
 
             // Set progressbar title
@@ -124,38 +140,39 @@ public class Video_Low_Mission extends Activity {
             return null;
         }
 
-
         @Override
         protected void onPostExecute(Void args) {
-
             try {
                 // Start the MediaController
                 MediaController mediacontroller = new MediaController(
-                        Video_Low_Mission.this);
+                    Video_Low_Mission.this);
                 mediacontroller.setAnchorView(videoview);
+
                 // Get the URL from String VideoURL
                 Uri video = Uri.parse(selectedStreamUrl);
                 videoview.setMediaController(mediacontroller);
                 videoview.setVideoURI(video);
+
                 //boolean streamOnLine = mediacontroller.checkInputConnectionProxy(videoview);
                 boolean streamOnLine = true;
-                if(!streamOnLine)
-                {
+
+                if (!streamOnLine) {
                     AlertDialog.Builder adb = new AlertDialog.Builder(Video_Low_Mission.this);
+
                     // set title
                     adb.setTitle("Streaming error.");
 
                     // set dialog message
                     adb.setMessage("Stream currently off-line.")
-                       .setCancelable(false)
-                       .setPositiveButton("OK",new DialogInterface.OnClickListener() {
-                          public void onClick(DialogInterface dialog,int id) {
-                              // ToDo: Exit the video stream action
-                              //Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
-                              Intent i = new Intent(getApplicationContext(), MainActivity.class);
-                              startActivity(i);
-                          }
-                    });
+                        .setCancelable(false)
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // TODO: Exit the video stream action
+                                //Toast.makeText(getApplicationContext(), items[item], Toast.LENGTH_SHORT).show();
+                                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(i);
+                            }
+                        });
 
                     // create alert dialog
                     AlertDialog alertDialog = adb.create();
@@ -165,6 +182,7 @@ public class Video_Low_Mission extends Activity {
 
                     //cancel async task
                     this.cancel(true);
+
                     return;
                 }
 
@@ -184,32 +202,8 @@ public class Video_Low_Mission extends Activity {
                 Log.e("Video_Low_Mission.onPostExecute() Error: ", e.getMessage());
                 e.printStackTrace();
             }
-
-
         }
-
-    } // private class StreamVideo extends AsyncTask<Void, Void, Void> {
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.video__low__mission, menu);
-        return super.onCreateOptionsMenu(menu);
-        //return true;
     }
 
-    public void fullScreenClicked () {
-        Window w = getWindow();
-
-        //Window winHnd = this.getWindow();
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        w.setFlags(w.getAttributes().FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-    }
-
-    public void muteClicked () {
-        //Window w = getWindow();
-        //Window winHnd = this.getWindow();
-        //requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //w.setFlags(w.getAttributes()., WindowManager.LayoutParams);
-    }
-
+    // private class StreamVideo extends AsyncTask<Void, Void, Void> {
 }
