@@ -5,15 +5,17 @@ package com.gospelministries.gmimedia;
  */
 
 import android.content.Context;
-import android.util.AttributeSet;
-import android.widget.VideoView;
-//import android.widget.MediaController;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
 import android.media.MediaPlayer.OnPreparedListener;
+import android.util.AttributeSet;
+import android.widget.VideoView;
+//import android.widget.MediaController;
 
-public class VideoViewMuteable extends VideoView implements OnPreparedListener, OnCompletionListener, OnErrorListener {
+public class VideoViewMuteable extends VideoView implements OnPreparedListener,
+    OnCompletionListener, OnErrorListener {
+
     private MediaPlayer mediaPlayer;
 
     public VideoViewMuteable(Context context, AttributeSet attributes) {
@@ -31,13 +33,13 @@ public class VideoViewMuteable extends VideoView implements OnPreparedListener, 
 
     @Override
     public boolean onError(MediaPlayer mediaPlayer, int what, int extra) {
-      // ToDo
+        // TODO
         return false;
     }
 
     @Override
     public void onCompletion(MediaPlayer mediaPlayer) {
-      // ToDo
+        // TODO
     }
 
     public void mute() {
