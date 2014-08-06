@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/.editorconfig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.gitattributes" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/scopes/scope_settings.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.travis.yml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/build.gradle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/proguard-rules.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/AndroidManifest.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/Info.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/MainActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/RadioActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/VideoStream.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/VideoStreamAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/VideoViewMuteable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/Video_Low_Mission.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_info.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_main.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_radio.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_video.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_video__low__mission.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/listview_header_row.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/listview_header_row_radio.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/listview_item_row.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/main.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/info.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/main.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/radio.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/video.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/video__low__mission.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-sw600dp/dimens.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-sw720dp-land/dimens.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-v11/styles.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-v14/styles.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values/dimens.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values/styles.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMediaAndroid.iml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NewResources/ToDo_list.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/build.gradle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gradle.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/local.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/settings.gradle" charset="UTF-8" />
+  </component>
+</project>
+
