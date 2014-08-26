@@ -1,0 +1,12 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/tasks.xml
+/.idea/dictionaries/
+/.idea/libraries/*.xml
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
