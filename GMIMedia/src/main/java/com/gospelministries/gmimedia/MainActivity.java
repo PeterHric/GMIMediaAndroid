@@ -306,8 +306,8 @@ public class MainActivity extends Activity {
                             Intent i = new Intent(getApplicationContext(), RadioActivity.class);
                             startActivity(i);
                         }
-                        // TODO: mtneug: should this be else if ?
-                        if (item == 2) {
+                        // TODO: mtneug: should this be else if ? Yes indeed ! :)
+                        else if (item == 2) {
                             Intent i = new Intent(getApplicationContext(), Info.class);
                             startActivity(i);
                         }
