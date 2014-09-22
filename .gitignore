@@ -5,6 +5,8 @@
 /.idea/dictionaries/
 /.idea/libraries/*.xml
 
+build/
+
 Thumbs.db
 ehthumbs.db
 Desktop.ini

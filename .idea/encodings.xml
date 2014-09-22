@@ -9,39 +9,47 @@
     <file url="file://$PROJECT_DIR$/.travis.yml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/.gitignore" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/build.gradle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/build/generated/source/r/debug/com/gospelministries/gmimedia/R.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/build/intermediates/manifests/debug/AndroidManifest.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/proguard-rules.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/AndroidManifest.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/Info.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/MainActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/RadioActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/VideoStream.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/VideoStreamAdapter.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/VideoViewMuteable.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/Video_Low_Mission.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/adapter/StreamArrayAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/bean/AudioStream.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/bean/Stream.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/bean/StreamList.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/bean/Streampoint.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/bean/VideoStream.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/AbstractStreamListActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/InfoActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/RadioListActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/TvListActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/VideoPlayerActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/dialog/SelectStreampointDialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/dialog/TextFileDialogBuilder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/util/Constants.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/util/SerializerHelper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/widget/MuteableVideoView.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_info.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_main.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_radio.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_video.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_video__low__mission.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/listview_header_row.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/listview_header_row_radio.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/listview_item_row.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/main.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/info.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_stream_list.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/activity_video_player.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/item_header.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/layout/item_stream.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/main.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/radio.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/video.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/video__low__mission.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/video_player.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/gmi_description.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/radio_streams.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/tv_streams.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-sw600dp/dimens.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-sw720dp-land/dimens.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-v11/styles.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-v14/styles.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values/dimens.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values/strings.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values/styles.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMediaAndroid.iml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/NewResources/ToDo_list.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/VERSION" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/build.gradle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/extra/Streams.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/extra/TODO.md" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gradle.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/local.properties" charset="UTF-8" />

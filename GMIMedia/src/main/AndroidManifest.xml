@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gospelministries.gmimedia" >
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="17" />
+<!--
+  ~ Copyright (C) 2014 Gospel Ministries International
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License version 2 as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.gospelministries.gmimedia">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.gospelministries.gmimedia.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:theme="@style/AppTheme">
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <!-- TODO: why setting the labels if they will be overwritten by code? -->
+
+        <activity
+            android:name=".ui.activity.TvListActivity"
+            android:label="@string/title_activity_tv_list">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity
-            android:name="com.gospelministries.gmimedia.Video_Low_Mission"
-            android:label="@string/title_activity_video" >
-            --android:parentActivityName="com.gospelministries.gmimedia.MainActivity" >
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value="com.gospelministries.gmimedia.MainActivity"
-            />
+            android:name=".ui.activity.VideoPlayerActivity"
+            android:label="@string/title_activity_video_player">
         </activity>
+
         <activity
-            android:name="com.gospelministries.gmimedia.RadioActivity"
-            android:label="@string/title_activity_radio" >
+            android:name=".ui.activity.RadioListActivity"
+            android:label="@string/title_activity_radio_list">
         </activity>
+
         <activity
-            android:name="com.gospelministries.gmimedia.Info"
-            android:label="@string/title_activity_info" >
+            android:name=".ui.activity.InfoActivity"
+            android:label="@string/title_activity_info">
         </activity>
     </application>
 
