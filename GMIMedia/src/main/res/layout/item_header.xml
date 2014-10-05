@@ -16,11 +16,19 @@
   ~ along with this program. If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<resources>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
 
-    <!--
-         Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw600dp devices (e.g. 7" tablets) here.
-    -->
+    <TextView android:id="@+id/header_text_view"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:gravity="center"
+              android:textStyle="bold"
+              android:textSize="22sp"
+              android:textColor="#FFFFFF"
+              android:padding="10dp"
+              android:background="#003366"/>
 
-</resources>
+</LinearLayout>

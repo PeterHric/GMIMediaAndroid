@@ -8,6 +8,8 @@ android:
     - android-L
     - sys-img-armeabi-v7a-android-l
 
+    - android-20
+
     - android-19
     - sys-img-armeabi-v7a-android-19
 
@@ -16,6 +18,9 @@ android:
 
     - android-10
     - sys-img-x86-android-10
+
+    - extra-android-m2repository
+    - extra-android-support
 
 env:
   matrix:

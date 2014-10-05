@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 Gospel Ministries International
+  ~
+  ~ This program is free software; you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License version 2 as
+  ~ published by the Free Software Foundation.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<stream-list>
+
+    <!--
+        TODO: http dynamic streaming would be better as rtsp. The sound and
+              video stream is not in sync with rtsp. But the dynamic streaming
+              format of apple only works with Android 4 and above.
+    -->
+
+    <video-stream icon="flag_us">
+        <name>Mission TV USA</name>
+        <language>English</language>
+        <streampoint bitrate="420">rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvl</streampoint>
+        <streampoint bitrate="270">rtsp://streamer1.streamhost.org:1935/salive/GMImissiontvh</streampoint> <!-- TODO: why is this classified as high quality? -->
+    </video-stream>
+
+    <video-stream icon="flag_ph">
+        <name>HCBN Philippines</name>
+        <language>English</language>
+        <streampoint bitrate="250">rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnl</streampoint> <!-- TODO: bitrate, not found -->
+    </video-stream>
+
+    <video-stream icon="flag_gd">
+        <name>Global Family Network Grenada</name>
+        <language>English</language>
+        <streampoint bitrate="500">rtsp://streamer1.streamhost.org:1935/salive/GMIgfnm</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="1000">rtsp://streamer1.streamhost.org:1935/salive/GMIgfnh</streampoint> <!-- TODO: bitrate, not found -->
+    </video-stream>
+
+    <video-stream icon="flag_ke">
+        <name>2CBN Kenya</name>
+        <language>English</language>
+        <streampoint bitrate="250">rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnl</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="500">rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnm</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="1000">rtsp://streamer1.streamhost.org:1935/salive/GMI2cbnh</streampoint> <!-- TODO: bitrate, not found -->
+    </video-stream>
+
+    <video-stream icon="flag_bo">
+        <name>Red ADvenir Bolivia</name>
+        <language>Spanish</language>
+        <streampoint bitrate="214">rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirl</streampoint>
+        <streampoint bitrate="592">rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirm</streampoint>
+        <streampoint bitrate="1247">rtsp://streamer1.streamhost.org:1935/salive/GMIredadvenirh</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_es">
+        <name>Alfa Television Spain</name>
+        <language>Spanish</language>
+        <streampoint bitrate="110">rtsp://streamer1.streamhost.org:1935/salive/GMIalfal</streampoint>
+        <streampoint bitrate="310">rtsp://streamer1.streamhost.org:1935/salive/GMIalfam</streampoint>
+        <streampoint bitrate="764">rtsp://streamer1.streamhost.org:1935/salive/GMIalfah</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_hu">
+        <name>Light Channel Hungary</name>
+        <language>Hungarian</language>
+        <streampoint bitrate="456">rtsp://streamer1.streamhost.org:1935/salive/hungarian</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_ro">
+        <name>Light Channel Rumania</name>
+        <language>Romanian</language>
+        <streampoint bitrate="500">rtsp://streamer1.streamhost.org:1935/salive/romanian</streampoint> <!-- TODO: bitrate, not found -->
+    </video-stream>
+
+    <video-stream icon="flag_de">
+        <name>Light Channel Germany</name>
+        <language>German</language>
+        <streampoint bitrate="664">rtsp://streamer1.streamhost.org:1935/salive/lctvde</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_br">
+        <name>Terceiro Anjo Brasil</name>
+        <language>Portuguese</language>
+        <streampoint bitrate="250">rtsp://streamer1.streamhost.org:1935/salive/GMI3anjol</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="313">rtsp://streamer1.streamhost.org:1935/salive/GMI3anjom</streampoint>
+        <streampoint bitrate="517">rtsp://streamer1.streamhost.org:1935/salive/GMI3anjoh</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_id">
+        <name>HCBN Indonesia</name>
+        <language>Bahasa Indonesia</language>
+        <streampoint bitrate="250">rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINlow</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="500">rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINmed</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="1000">rtsp://streamer1.streamhost.org:1935/salive/GMIhcbnINhigh</streampoint> <!-- TODO: bitrate, not found -->
+    </video-stream>
+
+    <video-stream icon="flag_fr">
+        <name>TV Famille France</name>
+        <language>French</language>
+        <streampoint bitrate="214">rtsp://streamer1.streamhost.org:1935/salive/GMItvfl</streampoint>
+        <streampoint bitrate="592">rtsp://streamer1.streamhost.org:1935/salive/GMItvfm</streampoint>
+        <streampoint bitrate="1257">rtsp://streamer1.streamhost.org:1935/salive/GMItvfh</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_it">
+        <name>Light Channel Italy</name>
+        <language>Italian</language>
+        <streampoint bitrate="680">rtsp://streamer1.streamhost.org:1935/salive/lcit</streampoint>
+    </video-stream>
+
+    <!-- TODO: same url as Light Channel Czech Republic
+    <video-stream icon="flag_sk">
+        <name>Light Channel Slovakia</name>
+        <language>Music</language>
+        <streampoint bitrate="640">rtsp://streamer1.streamhost.org:1935/salive/lctvcz</streampoint>
+    </video-stream>-->
+
+    <video-stream icon="flag_cz">
+        <name>Light Channel Czech Republic</name>
+        <language>Music</language>
+        <streampoint bitrate="640">rtsp://streamer1.streamhost.org:1935/salive/lctvcz</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_nl">
+        <name>Light Channel Nederlanden</name>
+        <language>Dutch</language>
+        <streampoint bitrate="327">rtsp://streamer1.streamhost.org:1935/salive/GMILightNLL</streampoint>
+        <streampoint bitrate="708">rtsp://streamer1.streamhost.org:1935/salive/GMILightNLM</streampoint>
+        <streampoint bitrate="1732">rtsp://streamer1.streamhost.org:1935/salive/GMILightNLH</streampoint>
+    </video-stream>
+
+    <!-- TODO: add icon -->
+    <video-stream>
+        <name>Библейский маяк</name>
+        <language>Russian</language>
+        <streampoint bitrate="1800">rtsp://streamer.uvcm.eu:1935/bm/p03-1800</streampoint>
+        <streampoint bitrate="900">rtsp://streamer.uvcm.eu:1935/bm/p03-900</streampoint>
+        <streampoint bitrate="500">rtsp://streamer.uvcm.eu:1935/bm/p03-500</streampoint>
+        <streampoint bitrate="250">rtsp://streamer.uvcm.eu:1935/bm/p03-250</streampoint>
+    </video-stream>
+
+    <video-stream>
+        <name>Библейский маячок</name>
+        <language>Russian</language>
+        <streampoint bitrate="1800">rtsp://streamer.uvcm.eu:1935/bm/maya4ok-1800</streampoint>
+        <streampoint bitrate="900">rtsp://streamer.uvcm.eu:1935/bm/maya4ok-900</streampoint>
+        <streampoint bitrate="500">rtsp://streamer.uvcm.eu:1935/bm/maya4ok-500</streampoint>
+        <streampoint bitrate="250">rtsp://streamer.uvcm.eu:1935/bm/maya4ok-250</streampoint>
+    </video-stream>
+
+    <video-stream>
+        <name>Х-МТВ</name>
+        <language>Music</language>
+        <streampoint bitrate="1800">rtsp://streamer.uvcm.eu:1935/bm/x-mtv-1800</streampoint>
+        <streampoint bitrate="900">rtsp://streamer.uvcm.eu:1935/bm/x-mtv-900</streampoint>
+        <streampoint bitrate="500">rtsp://streamer.uvcm.eu:1935/bm/x-mtv-500</streampoint>
+        <streampoint bitrate="250">rtsp://streamer.uvcm.eu:1935/bm/x-mtv-250</streampoint>
+    </video-stream>
+
+    <video-stream>
+        <name>Библейский маяк - Vital</name>
+        <language>Russian</language>
+        <streampoint bitrate="1800">rtsp://streamer.uvcm.eu:1935/bm/vital-1800</streampoint>
+        <streampoint bitrate="900">rtsp://streamer.uvcm.eu:1935/bm/vital-900</streampoint>
+        <streampoint bitrate="500">rtsp://streamer.uvcm.eu:1935/bm/vital-500</streampoint>
+        <streampoint bitrate="250">rtsp://streamer.uvcm.eu:1935/bm/vital-250</streampoint>
+    </video-stream>
+
+    <video-stream>
+        <name>Библейский маяк - Family</name>
+        <language>Russian</language>
+        <streampoint bitrate="1800">rtsp://streamer.uvcm.eu:1935/bm/family-1800</streampoint>
+        <streampoint bitrate="900">rtsp://streamer.uvcm.eu:1935/bm/family-900</streampoint>
+        <streampoint bitrate="500">rtsp://streamer.uvcm.eu:1935/bm/family-500</streampoint>
+        <streampoint bitrate="250">rtsp://streamer.uvcm.eu:1935/bm/family-250</streampoint>
+    </video-stream>
+
+</stream-list>

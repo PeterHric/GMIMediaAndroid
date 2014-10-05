@@ -16,11 +16,15 @@
   ~ along with this program. If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--
-         Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw600dp devices (e.g. 7" tablets) here.
-    -->
+    <item android:id="@+id/action_full_screen"
+          android:title="@string/full_screen"
+          app:showAsAction="never"/>
 
-</resources>
+    <item android:id="@+id/action_mute_audio"
+          android:title="@string/mute_audio"
+          app:showAsAction="never"/>
+
+</menu>
