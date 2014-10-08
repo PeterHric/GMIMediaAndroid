@@ -24,11 +24,8 @@
 
 
 
-    <!-- TvListActivity -->
-    <string name="title_activity_tv_list">TV Stations</string>
-
-    <!-- RadioListActivity -->
-    <string name="title_activity_radio_list">Radio Stations</string>
+    <!-- MainActivity -->
+    <string name="title_activity_main">GMIMedia</string>
 
     <!-- InfoActivity -->
     <string name="title_activity_info">Information</string>

@@ -76,7 +76,7 @@ public class VideoPlayerActivity extends ActionBarActivity {
         position = bundle.getInt(TAG_POSITION, DEFAULT_POSITION);
 
         // set the activity's window title
-        this.setTitle(stream.getName());
+        getSupportActionBar().setTitle(stream.getName());
 
         // execute StreamVideo AsyncTask
         new StreamVideo().execute();
@@ -99,9 +99,12 @@ public class VideoPlayerActivity extends ActionBarActivity {
                 toggleMute();
                 return true;
 
-            default:
-                return super.onOptionsItemSelected(item);
+            case android.R.id.home:
+                finish();
+                return true;
         }
+
+        return super.onOptionsItemSelected(item);
     }
 
     /**
@@ -199,8 +202,7 @@ public class VideoPlayerActivity extends ActionBarActivity {
                 .setCancelable(false)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Intent i = new Intent(getApplicationContext(), TvListActivity.class);
-                        startActivity(i);
+                        finish();
                     }
                 });
 
