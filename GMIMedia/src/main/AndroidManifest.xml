@@ -27,11 +27,9 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
 
-        <!-- TODO: why setting the labels if they will be overwritten by code? -->
-
         <activity
-            android:name=".ui.activity.TvListActivity"
-            android:label="@string/title_activity_tv_list">
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/title_activity_main">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -41,17 +39,22 @@
 
         <activity
             android:name=".ui.activity.VideoPlayerActivity"
-            android:label="@string/title_activity_video_player">
-        </activity>
+            android:label="@string/title_activity_video_player"
+            android:parentActivityName=".ui.activity.MainActivity">
 
-        <activity
-            android:name=".ui.activity.RadioListActivity"
-            android:label="@string/title_activity_radio_list">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity"/>
         </activity>
 
         <activity
             android:name=".ui.activity.InfoActivity"
-            android:label="@string/title_activity_info">
+            android:label="@string/title_activity_info"
+            android:parentActivityName=".ui.activity.MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity"/>
         </activity>
     </application>
 

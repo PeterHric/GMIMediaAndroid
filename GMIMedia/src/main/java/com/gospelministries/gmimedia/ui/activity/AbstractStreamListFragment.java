@@ -19,11 +19,9 @@ package com.gospelministries.gmimedia.ui.activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.*;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
@@ -43,7 +41,7 @@ import static com.gospelministries.gmimedia.util.Constants.TAG_POSITION;
  *
  * @since 0.9_beta
  */
-public abstract class AbstractStreamListActivity extends ActionBarActivity {
+public abstract class AbstractStreamListFragment extends Fragment {
 
     /**
      * List of streams.
@@ -56,13 +54,6 @@ public abstract class AbstractStreamListActivity extends ActionBarActivity {
     private ListView listView;
 
     /**
-     * Should return the String that is written in the header.
-     *
-     * @return String in header
-     */
-    public abstract String getHeaderTitle();
-
-    /**
      * Should return the ID of the xml resource defining all the streams.
      *
      * @return ID of xml resource
@@ -70,66 +61,21 @@ public abstract class AbstractStreamListActivity extends ActionBarActivity {
     public abstract int getStreamFileId();
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stream_list);
-
-        // TODO: why a header and a title?
-        setTitle(getString(R.string.gospel_ministries));
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.activity_stream_list, container, false);
 
         // find view elements
-        listView = (ListView) findViewById(R.id.list_view);
+        listView = (ListView) rootView.findViewById(R.id.list_view);
 
         // add elements to the ListView
-        addHeader();
-
         try {
             addStreams();
         } catch (Exception e) {
             // TODO: what todo here?
             Log.e("AbstractStreamListActivity.addStreams()", e.getMessage());
         }
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Class activity;
-
-        switch (item.getItemId()) {
-            case R.id.action_radio:
-                activity = RadioListActivity.class;
-                break;
-
-            case R.id.action_tv:
-                activity = TvListActivity.class;
-                break;
-
-            case R.id.action_information:
-                activity = InfoActivity.class;
-                break;
-
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-
-        startActivity(new Intent(getApplicationContext(), activity));
-        return true;
-    }
-
-    /**
-     * Add a header to the list view.
-     */
-    private void addHeader() {
-        View header = getLayoutInflater().inflate(R.layout.item_header, listView, false);
-        TextView headerTextView = (TextView) header.findViewById(R.id.header_text_view);
-        headerTextView.setText(getHeaderTitle());
-        listView.addHeaderView(header);
+        return rootView;
     }
 
     /**
@@ -138,8 +84,8 @@ public abstract class AbstractStreamListActivity extends ActionBarActivity {
      * @throws Exception
      */
     private void addStreams() throws Exception {
-        streamList = SerializerHelper.deserializeStreamList(this, getStreamFileId());
-        StreamArrayAdapter streamArrayAdapter = new StreamArrayAdapter(this, R.layout.item_stream, streamList);
+        streamList = SerializerHelper.deserializeStreamList(getActivity(), getStreamFileId());
+        StreamArrayAdapter streamArrayAdapter = new StreamArrayAdapter(getActivity(), R.layout.item_stream, streamList);
         listView.setAdapter(streamArrayAdapter);
 
         // Callback
@@ -169,7 +115,7 @@ public abstract class AbstractStreamListActivity extends ActionBarActivity {
      * @param stream the stream
      */
     private void chooseQualityAndLaunchStream(final Stream stream) {
-        new SelectStreampointDialog(this, stream, new DialogInterface.OnClickListener() {
+        new SelectStreampointDialog(getActivity(), stream, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int position) {
                 launchStream(stream, position);
@@ -185,7 +131,7 @@ public abstract class AbstractStreamListActivity extends ActionBarActivity {
      */
     private void launchStream(final Stream stream, final int position) {
         // TODO: adapt for audio streams here or make a generic player?
-        Intent intent = new Intent(getApplicationContext(), VideoPlayerActivity.class);
+        Intent intent = new Intent(getActivity(), VideoPlayerActivity.class);
         intent.putExtra(Stream.class.getCanonicalName(), stream);
         intent.putExtra(TAG_POSITION, position);
         startActivity(intent);

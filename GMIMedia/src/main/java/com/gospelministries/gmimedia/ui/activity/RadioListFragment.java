@@ -23,12 +23,7 @@ import com.gospelministries.gmimedia.R;
  *
  * @since 0.9_beta
  */
-public class RadioListActivity extends AbstractStreamListActivity {
-
-    @Override
-    public String getHeaderTitle() {
-        return getString(R.string.title_activity_radio_list);
-    }
+public class RadioListFragment extends AbstractStreamListFragment {
 
     @Override
     public int getStreamFileId() {
