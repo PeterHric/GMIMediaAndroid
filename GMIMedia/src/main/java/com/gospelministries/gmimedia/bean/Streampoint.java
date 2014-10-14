@@ -58,9 +58,9 @@ public class Streampoint implements Parcelable, Comparable<Streampoint> {
 
         // TODO: translate + choose bitrates
         // TODO: adapt for audio
-        if      (1000 <= bitrate)                   qualityString = "High";
-        else if ( 500 <= bitrate && bitrate < 1000) qualityString = "Medium";
-        else                                        qualityString = "Low";
+        if      (1000 <= bitrate)                   qualityString = "Hi: " + bitrate + " kbps";
+        else if ( 500 <= bitrate && bitrate < 1000) qualityString = "Med: " + bitrate + " kbps" ;
+        else                                        qualityString = "Lo: " + bitrate + " kbps";
 
         return qualityString;
     }

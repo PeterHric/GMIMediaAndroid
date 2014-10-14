@@ -92,10 +92,8 @@ public abstract class AbstractStreamListFragment extends Fragment {
         listView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // clicked on header?
-                if (position == 0) return;
 
-                Stream stream = streamList.getStreams().get(position - 1);
+                Stream stream = streamList.getStreams().get(position);
                 stream.sortStreampointList();
 
                 if (stream.getStreampointList().size() == 1) {
