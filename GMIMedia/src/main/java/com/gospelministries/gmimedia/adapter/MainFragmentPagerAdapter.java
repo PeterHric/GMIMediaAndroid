@@ -31,7 +31,6 @@ import java.util.Locale;
  *
  * @since 1.0.0
  */
-
 public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
 
     /**

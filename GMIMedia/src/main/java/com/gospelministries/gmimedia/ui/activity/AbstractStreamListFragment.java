@@ -36,7 +36,7 @@ import com.gospelministries.gmimedia.util.SerializerHelper;
 import static com.gospelministries.gmimedia.util.Constants.TAG_POSITION;
 
 /**
- * Activity with a list view of streams. Clicking on an item will start the
+ * Fragment with a list view of streams. Clicking on an item will start the
  * player.
  *
  * @since 0.9_beta

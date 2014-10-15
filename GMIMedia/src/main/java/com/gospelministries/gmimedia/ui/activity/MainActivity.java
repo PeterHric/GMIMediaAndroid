@@ -28,6 +28,11 @@ import android.view.MenuItem;
 import com.gospelministries.gmimedia.R;
 import com.gospelministries.gmimedia.adapter.MainFragmentPagerAdapter;
 
+/**
+ * Activity with a {@code ViewPager} showing TV and radio streams in two tabs.
+ *
+ * @since 1.0.0
+ */
 public class MainActivity extends ActionBarActivity {
 
     /**
