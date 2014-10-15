@@ -19,7 +19,7 @@ package com.gospelministries.gmimedia.ui.activity;
 import com.gospelministries.gmimedia.R;
 
 /**
- * Activity that shows the list of radio stations.
+ * Fragment that shows the list of radio stations.
  *
  * @since 0.9_beta
  */
