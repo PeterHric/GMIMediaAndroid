@@ -42,8 +42,7 @@
         <streampoint bitrate="96">rtsp://streamer1.streamhost.org:1935/salive/GMI3anjoa</streampoint>
     </audio-stream>
 
-    <!-- TODO: add icon -->
-    <audio-stream>
+    <audio-stream icon="flag_ru">
         <name>Христианское радио 'Библейский маяк'</name>
         <language>Russian</language>
         <streampoint bitrate="128">http://streamer.uvcm.eu:8080/bm-128</streampoint>

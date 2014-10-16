@@ -131,8 +131,7 @@
         <streampoint bitrate="1732">http://streamer1.streamhost.org:1935/salive/GMILightNLH/playlist.m3u8</streampoint>
     </video-stream>
 
-    <!-- TODO: add icon -->
-    <video-stream>
+    <video-stream icon="flag_ru">
         <name>Библейский маяк</name>
         <language>Russian</language>
         <streampoint bitrate="1800">http://streamer.uvcm.eu:1935/bm/p03-1800/playlist.m3u8</streampoint>
@@ -141,7 +140,7 @@
         <streampoint bitrate="250">http://streamer.uvcm.eu:1935/bm/p03-250/playlist.m3u8</streampoint>
     </video-stream>
 
-    <video-stream>
+    <video-stream icon="flag_ru">
         <name>Библейский маячок</name>
         <language>Russian</language>
         <streampoint bitrate="1800">http://streamer.uvcm.eu:1935/bm/maya4ok-1800/playlist.m3u8</streampoint>
@@ -150,7 +149,7 @@
         <streampoint bitrate="250">http://streamer.uvcm.eu:1935/bm/maya4ok-250/playlist.m3u8</streampoint>
     </video-stream>
 
-    <video-stream>
+    <video-stream icon="flag_ru">
         <name>Х-МТВ</name>
         <language>Music</language>
         <streampoint bitrate="1800">http://streamer.uvcm.eu:1935/bm/x-mtv-1800/playlist.m3u8</streampoint>
@@ -159,7 +158,7 @@
         <streampoint bitrate="250">http://streamer.uvcm.eu:1935/bm/x-mtv-250/playlist.m3u8</streampoint>
     </video-stream>
 
-    <video-stream>
+    <video-stream icon="flag_ru">
         <name>Библейский маяк - Vital</name>
         <language>Russian</language>
         <streampoint bitrate="1800">http://streamer.uvcm.eu:1935/bm/vital-1800/playlist.m3u8</streampoint>
@@ -168,7 +167,7 @@
         <streampoint bitrate="250">http://streamer.uvcm.eu:1935/bm/vital-250/playlist.m3u8</streampoint>
     </video-stream>
 
-    <video-stream>
+    <video-stream icon="flag_ru">
         <name>Библейский маяк - Family</name>
         <language>Russian</language>
         <streampoint bitrate="1800">http://streamer.uvcm.eu:1935/bm/family-1800/playlist.m3u8</streampoint>
