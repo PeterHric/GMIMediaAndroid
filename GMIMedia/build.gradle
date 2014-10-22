@@ -57,9 +57,9 @@ android {
         release {
             // TODO: enable proguard
             //       simplexml needs some rules for the build to compile
-            runProguard false
+            runProguard true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
-            // signingConfig signingConfigs.release
+            //signingConfig signingConfigs.release
         }
     }
 
