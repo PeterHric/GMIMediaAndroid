@@ -25,16 +25,24 @@
         <streampoint bitrate="270">http://streamer1.streamhost.org:1935/salive/GMImissiontvh/playlist.m3u8</streampoint> <!-- TODO: why is this classified as high quality? -->
     </video-stream>
 
+    <video-stream icon="flag_ad">
+        <name>Amazing Discoveries</name>
+        <language>English</language>
+        <streampoint bitrate="600">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream1/playlist.m3u8</streampoint>
+        <streampoint bitrate="350">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream2/playlist.m3u8</streampoint>
+        <streampoint bitrate="200">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream3/playlist.m3u8</streampoint>
+    </video-stream>
+
     <video-stream icon="flag_ph">
         <name>HCBN Philippines</name>
         <language>English</language>
-        <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMIhcbnl/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
-    </video-stream>
+        <streampoint bitrate="550">http://streamer1.streamhost.org:1935/salive/GMIhcbnh/playlist.m3u8</streampoint>
+   </video-stream>
 
-    <video-stream icon="flag_gd">
-        <name>Global Family Network Grenada</name>
-        <language>English</language>
-        <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMIgfnm/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
+   <video-stream icon="flag_gd">
+       <name>Global Family Network Grenada</name>
+       <language>English</language>
+       <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMIgfnm/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
         <streampoint bitrate="1000">http://streamer1.streamhost.org:1935/salive/GMIgfnh/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
     </video-stream>
 
