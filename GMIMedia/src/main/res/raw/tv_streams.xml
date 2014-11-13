@@ -18,6 +18,12 @@
 
 <stream-list>
 
+    <video-stream icon="flag_af">
+        <name>Amazing Facts TV</name>
+        <language>English</language>
+        <streampoint bitrate="900">http://amazingfacts.live-s.cdn.bitgravity.com/cdn-live/_definst_/amazingfacts/live/feed01/playlist.m3u8</streampoint>
+    </video-stream>
+
     <video-stream icon="flag_us">
         <name>Mission TV USA</name>
         <language>English</language>
@@ -26,7 +32,7 @@
     </video-stream>
 
     <video-stream icon="flag_ad">
-        <name>Amazing Discoveries</name>
+        <name>Amazing Discoveries TV</name>
         <language>English</language>
         <streampoint bitrate="600">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream1/playlist.m3u8</streampoint>
         <streampoint bitrate="350">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream2/playlist.m3u8</streampoint>

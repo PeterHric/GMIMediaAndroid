@@ -26,7 +26,8 @@ task versionInfo {
     ext.versionRevision = 'git rev-parse --short=9 HEAD'.execute().text.trim()
     ext.versionName     = file('../VERSION').text.trim()
     ext.gitTags         = 'git tags'.execute().text.trim()
-    ext.versionCode     = ext.gitTags.split(System.getProperty("line.separator")).length
+    //ext.versionCode     = ext.gitTags.split(System.getProperty("line.separator")).length
+    ext.versionCode     = 2
     ext.versionFullName = "${ext.versionName}.${ext.versionRevision}"
 
     println "Version Revision:  ${ext.versionRevision}"
@@ -57,7 +58,7 @@ android {
         release {
             // TODO: enable proguard
             //       simplexml needs some rules for the build to compile
-            runProguard true
+            runProguard false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
             //signingConfig signingConfigs.release
         }
