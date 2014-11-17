@@ -18,6 +18,12 @@
 
 <stream-list>
 
+    <audio-stream icon="flag_3abn">
+        <name>3ABN Radio</name>
+        <language>English</language>
+        <streampoint bitrate="128">http://war.str3am.com:7180/live</streampoint>
+    </audio-stream>
+
     <audio-stream icon="flag_ve">
         <name>Radio La Voz</name>
         <language>Spanish</language>
