@@ -39,21 +39,20 @@
         <streampoint bitrate="200">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream3/playlist.m3u8</streampoint>
     </video-stream>
 
-    <!--
+<!--
     <video-stream icon="flag_3abn">
         <name>3ABN</name>
         <language>English</language>
-        <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnEnglishF_3ABN_1200@100395?videoId=2491767533001&lineUpId=&pubId=2176530207001&playerId=2176530431001&affiliateId=&v=3.4.0&fp=WIN%2015,0,0,189&r=HCITT&g=ZLXPYPXRDVPQ</streampoint>
+        <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnEnglishF_3ABN_1200</streampoint>
     </video-stream>
 
 
     <video-stream icon="flag_3abn">
         <name>3ABN Kids</name>
         <language>English</language>
-        <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnSonBeam_3ABN_250@100395?videoId=2495728158001&lineUpId=&pubId=2176530207001&playerId=2176530431001&affiliateId=&v=3.4.0&fp=WIN%2015,0,0,189&r=IPCIG&g=TMRLLSKOUXSA</streampoint>
+        <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnSonBeam_3ABN_250</streampoint>
     </video-stream>
-    -->
-
+-->
 
     <video-stream icon="flag_llbn">
         <name>LLBN TV - Arabic</name>
@@ -143,7 +142,7 @@
     <video-stream icon="flag_br">
         <name>Terceiro Anjo Brasil</name>
         <language>Portuguese</language>
-        <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMI3anjol/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
+        <!-- <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMI3anjol/playlist.m3u8</streampoint> --> <!-- TODO: Stream NOT found -->
         <streampoint bitrate="313">http://streamer1.streamhost.org:1935/salive/GMI3anjom/playlist.m3u8</streampoint>
         <streampoint bitrate="517">http://streamer1.streamhost.org:1935/salive/GMI3anjoh/playlist.m3u8</streampoint>
     </video-stream>
