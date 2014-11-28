@@ -27,7 +27,7 @@ task versionInfo {
     ext.versionName     = file('../VERSION').text.trim()
     ext.gitTags         = 'git tags'.execute().text.trim()
     //ext.versionCode     = ext.gitTags.split(System.getProperty("line.separator")).length
-    ext.versionCode     = 2
+    ext.versionCode     = 3
     ext.versionFullName = "${ext.versionName}.${ext.versionRevision}"
 
     println "Version Revision:  ${ext.versionRevision}"

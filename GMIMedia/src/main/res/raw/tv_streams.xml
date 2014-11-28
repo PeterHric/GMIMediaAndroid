@@ -70,6 +70,12 @@
         <streampoint bitrate="1250">http://telvuehls_t01587-i.akamaihd.net/hls/live/215636/T01587-chinese/playlist_3.m3u8</streampoint>
     </video-stream>
 
+    <video-stream icon="flag_hope">
+        <name>Hope TV - Chinese</name>
+        <language>Chinese</language>
+        <streampoint bitrate="1000">http://203.69.85.37/hls-live/livepkgr/_definst_/hopetv/hopestream1.m3u8</streampoint>
+    </video-stream>
+
     <video-stream icon="flag_llbn">
         <name>LLBN TV - South Asia</name>
         <language>South Asian</language>
@@ -172,14 +178,20 @@
     <!-- TODO: same url as Light Channel Czech Republic
     <video-stream icon="flag_sk">
         <name>Light Channel Slovakia</name>
-        <language>Music</language>
+        <language>Slovak</language>
         <streampoint bitrate="640">http://streamer1.streamhost.org:1935/salive/lctvcz/playlist.m3u8</streampoint>
     </video-stream>-->
 
     <video-stream icon="flag_cz">
         <name>Light Channel Czech Republic</name>
-        <language>Music</language>
+        <language>Slovak-Czech</language>
         <streampoint bitrate="640">http://streamer1.streamhost.org:1935/salive/lctvcz/playlist.m3u8</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_hope">
+        <name>Hope TV Czech/Slovak Republic</name>
+        <language>Czech-Slovak</language>
+        <streampoint bitrate="640">http://stream2.mediawork.cz/hopetv/smil:hopetvvid.smil/playlist.m3u8</streampoint>
     </video-stream>
 
     <video-stream icon="flag_nl">
