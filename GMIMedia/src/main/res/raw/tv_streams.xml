@@ -39,20 +39,33 @@
         <streampoint bitrate="200">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream3/playlist.m3u8</streampoint>
     </video-stream>
 
-<!--
-    <video-stream icon="flag_3abn">
-        <name>3ABN</name>
+
+    <video-stream icon="flag_hope">
+        <name>Hope TV - English</name>
         <language>English</language>
-        <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnEnglishF_3ABN_1200</streampoint>
+        <streampoint bitrate="550">http://bcoveliveios-i.akamaihd.net/hls/live/201459/753071706001-1/index.m3u8</streampoint>
     </video-stream>
 
-
-    <video-stream icon="flag_3abn">
-        <name>3ABN Kids</name>
+    <video-stream icon="flag_hope">
+        <name>Hope Church TV - English</name>
         <language>English</language>
-        <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnSonBeam_3ABN_250</streampoint>
+        <streampoint bitrate="550">http://bcoveliveios-i.akamaihd.net/hls/live/201459/753071706001-3/index.m3u8</streampoint>
     </video-stream>
--->
+
+    <!--
+        <video-stream icon="flag_3abn">
+            <name>3ABN</name>
+            <language>English</language>
+            <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnEnglishF_3ABN_1200</streampoint>
+        </video-stream>
+
+
+        <video-stream icon="flag_3abn">
+            <name>3ABN Kids</name>
+            <language>English</language>
+            <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnSonBeam_3ABN_250</streampoint>
+        </video-stream>
+    -->
 
     <video-stream icon="flag_llbn">
         <name>LLBN TV - Arabic</name>
@@ -120,11 +133,17 @@
     </video-stream>
 
     <video-stream icon="flag_es">
-        <name>Alfa Television Spain</name>
+        <name>Alfa Televisión España</name>
         <language>Spanish</language>
         <streampoint bitrate="110">http://streamer1.streamhost.org:1935/salive/GMIalfal/playlist.m3u8</streampoint>
         <streampoint bitrate="310">http://streamer1.streamhost.org:1935/salive/GMIalfam/playlist.m3u8</streampoint>
         <streampoint bitrate="764">http://streamer1.streamhost.org:1935/salive/GMIalfah/playlist.m3u8</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_hope">
+        <name>Hope TV América del Sur - Español</name>
+        <language>Spanish</language>
+        <streampoint bitrate="500">http://50.22.36.40:1935/live/ngrp:tvnuevotiempo_all/playlist.m3u8</streampoint>
     </video-stream>
 
     <video-stream icon="flag_hu">
@@ -139,6 +158,13 @@
         <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/romanian/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
     </video-stream>
 
+    <video-stream icon="flag_hope">
+        <name>Hope TV - România</name>
+        <language>Romanian</language>
+        <streampoint bitrate="1400">http://play.streamkit.tv/content/channel/sperantatv/live/sperantatv.player.m3u8</streampoint>
+        <streampoint bitrate="1200">http://play.crestin.tv/content/channel/sperantatv/live/sperantatv.player.m3u8</streampoint>
+    </video-stream>
+
     <video-stream icon="flag_de">
         <name>Light Channel Germany</name>
         <language>German</language>
@@ -151,6 +177,12 @@
         <!-- <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMI3anjol/playlist.m3u8</streampoint> --> <!-- TODO: Stream NOT found -->
         <streampoint bitrate="313">http://streamer1.streamhost.org:1935/salive/GMI3anjom/playlist.m3u8</streampoint>
         <streampoint bitrate="517">http://streamer1.streamhost.org:1935/salive/GMI3anjoh/playlist.m3u8</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_hope">
+        <name>Hope TV Portuguese/Brasil</name>
+        <language>Portuguese</language>
+        <streampoint bitrate="400">http://50.22.36.40:1935/live/ngrp:tvnovotempo_all/playlist.m3u8</streampoint>
     </video-stream>
 
     <video-stream icon="flag_id">
