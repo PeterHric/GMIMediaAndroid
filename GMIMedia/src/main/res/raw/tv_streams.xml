@@ -146,6 +146,13 @@
         <streampoint bitrate="500">http://50.22.36.40:1935/live/ngrp:tvnuevotiempo_all/playlist.m3u8</streampoint>
     </video-stream>
 
+    <video-stream icon="flag_hope">
+        <name>Hope TV - Esperanza - Español</name>
+        <language>Spanish</language>
+        <streampoint bitrate="900">http://bcoveliveios-i.akamaihd.net/hls/live/201459/753071706001-2/index.m3u8</streampoint>
+    </video-stream>
+
+
     <video-stream icon="flag_hu">
         <name>Light Channel Hungary</name>
         <language>Hungarian</language>
@@ -153,7 +160,7 @@
     </video-stream>
 
     <video-stream icon="flag_ro">
-        <name>Light Channel Rumania</name>
+        <name>Light Channel Romania</name>
         <language>Romanian</language>
         <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/romanian/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
     </video-stream>
@@ -232,6 +239,12 @@
         <streampoint bitrate="327">http://streamer1.streamhost.org:1935/salive/GMILightNLL/playlist.m3u8</streampoint>
         <streampoint bitrate="708">http://streamer1.streamhost.org:1935/salive/GMILightNLM/playlist.m3u8</streampoint>
         <streampoint bitrate="1732">http://streamer1.streamhost.org:1935/salive/GMILightNLH/playlist.m3u8</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_hope">
+        <name>Hope TV - Україна - Ukraine</name>
+        <language>Ukrainian</language>
+        <streampoint bitrate="1000">http://91.90.23.69:1935/live/livestream_1/playlist.m3u8</streampoint>
     </video-stream>
 
     <video-stream icon="flag_ru">
