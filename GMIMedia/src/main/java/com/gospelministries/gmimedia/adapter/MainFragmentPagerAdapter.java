@@ -21,8 +21,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import com.gospelministries.gmimedia.R;
-import com.gospelministries.gmimedia.ui.activity.RadioListFragment;
-import com.gospelministries.gmimedia.ui.activity.TvListFragment;
+import com.gospelministries.gmimedia.ui.activity.GmiRadioListFragment;
+import com.gospelministries.gmimedia.ui.activity.GmiTvListFragment;
+import com.gospelministries.gmimedia.ui.activity.OtherTvListFragment;
+import com.gospelministries.gmimedia.ui.activity.OtherRadioListFragment;
 
 import java.util.Locale;
 
@@ -56,7 +58,7 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
      */
     @Override
     public int getCount() {
-        return 2;
+        return 4;
     }
 
     /**
@@ -70,9 +72,13 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new TvListFragment();
+                return new GmiTvListFragment();
             case 1:
-                return new RadioListFragment();
+                return new GmiRadioListFragment();
+            case 2:
+                return new OtherTvListFragment();
+            case 3:
+                return new OtherRadioListFragment();
         }
 
         throw new IllegalStateException("Position unknown");
@@ -91,9 +97,13 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
 
         switch (position) {
             case 0:
-                return context.getString(R.string.tv).toUpperCase(locale);
+                return context.getString(R.string.TV_GMI).toUpperCase(locale);
             case 1:
-                return context.getString(R.string.radio).toUpperCase(locale);
+                return context.getString(R.string.Radio_GMI).toUpperCase(locale);
+            case 2:
+                return context.getString(R.string.TV_Other).toUpperCase(locale);
+            case 3:
+                return context.getString(R.string.Radio_Other).toUpperCase(locale);
         }
 
         throw new IllegalStateException("Position unknown");

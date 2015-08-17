@@ -17,14 +17,16 @@
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:background="#000000"
-                android:layout_height="fill_parent">
+                android:layout_height="wrap_content"
+    android:onClick="@string/full_screen">
 
     <VideoView android:id="@+id/video_view"
                android:layout_width="fill_parent"
                android:layout_height="fill_parent"
                android:layout_centerHorizontal="true"
-               android:layout_centerVertical="true"/>
+               android:layout_centerVertical="true"
+        android:onClick="@string/full_screen" />
 
 </RelativeLayout>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
   ~ Copyright (C) 2014 Gospel Ministries International
   ~
@@ -14,15 +13,12 @@
   ~
   ~ You should have received a copy of the GNU General Public License
   ~ along with this program. If not, see <http://www.gnu.org/licenses/>.
-  -->
-
+-->
 <resources>
 
     <!-- Application -->
     <string name="app_name">GMIMedia</string>
     <string name="gospel_ministries">Gospel Ministries</string>
-
-
 
     <!-- MainActivity -->
     <string name="title_activity_main">GMIMedia</string>
@@ -39,17 +35,15 @@
     <!-- VideoPlayerActivity -->
     <string name="title_activity_video_player">Video Player</string>
 
-
-
     <!-- SelectStreampointDialog -->
     <string name="select_streampoint_dialog_title">Choose a video quality</string>
     <string name="buffering">Buffering…</string>
 
-
-
     <!-- main menu -->
-    <string name="tv">TV</string>
-    <string name="radio">Radio</string>
+    <string name="TV_GMI">GMI TV</string>
+    <string name="Radio_GMI">GMI Radio</string>
+    <string name="TV_Other">Other TV</string>
+    <string name="Radio_Other">Other Radio</string>
     <string name="info">Info</string>
 
     <!-- video_player menu -->

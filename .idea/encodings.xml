@@ -18,9 +18,10 @@
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/bean/Streampoint.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/bean/VideoStream.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/AbstractStreamListFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/GmiRadioListFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/GmiTvListFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/InfoActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/RadioListFragment.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/TvListFragment.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/OtherRadioListFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/activity/VideoPlayerActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/dialog/SelectStreampointDialog.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/java/com/gospelministries/gmimedia/ui/dialog/TextFileDialogBuilder.java" charset="UTF-8" />
@@ -34,8 +35,10 @@
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/main.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/menu/video_player.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/gmi_description.txt" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/radio_streams.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/tv_streams.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/radio_streams_gmi.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/radio_streams_other.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/tv_streams_gmi.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/raw/tv_streams_other.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-sw600dp/dimens.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values-sw720dp-land/dimens.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GMIMedia/src/main/res/values/dimens.xml" charset="UTF-8" />

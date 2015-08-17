@@ -19,14 +19,14 @@ package com.gospelministries.gmimedia.ui.activity;
 import com.gospelministries.gmimedia.R;
 
 /**
- * Fragment that shows the list of radio stations.
+ * Fragment that shows the list of TV stations.
  *
  * @since 0.9_beta
  */
-public class RadioListFragment extends AbstractStreamListFragment {
+public class GmiTvListFragment extends AbstractStreamListFragment {
 
     @Override
     public int getStreamFileId() {
-        return R.raw.radio_streams;
+        return R.raw.tv_streams_gmi;
     }
 }

@@ -5,7 +5,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:0.12.1'
-        classpath 'com.alexvasilkov:android-sign-release:0.3.+'
+        // classpath 'com.alexvasilkov:android-sign-release:0.3.+'
     }
 }
 
@@ -24,10 +24,10 @@ task versionInfo {
     description 'Prints and set information about the version to build'
 
     ext.versionRevision = 'git rev-parse --short=9 HEAD'.execute().text.trim()
-    ext.versionName     = file('../VERSION').text.trim()
-    ext.gitTags         = 'git tags'.execute().text.trim()
+    ext.versionName = file('../VERSION').text.trim()
+    ext.gitTags = 'git tags'.execute().text.trim()
     //ext.versionCode     = ext.gitTags.split(System.getProperty("line.separator")).length
-    ext.versionCode     = 3
+    ext.versionCode = 4
     ext.versionFullName = "${ext.versionName}.${ext.versionRevision}"
 
     println "Version Revision:  ${ext.versionRevision}"
@@ -72,11 +72,11 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:support-v4:20.+'
-    compile 'com.android.support:appcompat-v7:20.+'
-    compile('org.simpleframework:simple-xml:2.7.+'){
+    compile('org.simpleframework:simple-xml:2.7.+') {
         exclude module: 'stax'
         exclude module: 'stax-api'
         exclude module: 'xpp3'
     }
+    compile 'com.android.support:support-v4:20.0.0'
+    compile 'com.android.support:appcompat-v7:20.0.0'
 }

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
   ~ Copyright (C) 2014 Gospel Ministries International
   ~
@@ -14,47 +13,41 @@
   ~
   ~ You should have received a copy of the GNU General Public License
   ~ along with this program. If not, see <http://www.gnu.org/licenses/>.
-  -->
-
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.gospelministries.gmimedia">
+    package="com.gospelministries.gmimedia" >
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
-
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".ui.activity.MainActivity"
-            android:label="@string/title_activity_main">
-
+            android:label="@string/title_activity_main" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ui.activity.VideoPlayerActivity"
             android:label="@string/title_activity_video_player"
-            android:parentActivityName=".ui.activity.MainActivity">
-
+            android:parentActivityName=".ui.activity.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.activity.MainActivity"/>
+                android:value=".ui.activity.MainActivity" />
         </activity>
-
         <activity
             android:name=".ui.activity.InfoActivity"
             android:label="@string/title_activity_info"
-            android:parentActivityName=".ui.activity.MainActivity">
-
+            android:parentActivityName=".ui.activity.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.activity.MainActivity"/>
+                android:value=".ui.activity.MainActivity" />
         </activity>
     </application>
 
