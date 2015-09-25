@@ -119,6 +119,10 @@ public class VideoPlayerActivity extends ActionBarActivity {
 //        w.setFlags(w.getAttributes().FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
+    //@Override
+    public void fullScreen()
+    {}
+
     /**
      * Toggles the audio.
      */

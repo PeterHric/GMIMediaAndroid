@@ -27,6 +27,10 @@
     <video-stream icon="flag_us">
         <name>Mission TV USA</name>
         <language>English</language>
+
+        <streampoint bitrate="777">http://104.171.245.24:1935/live/missiontv/chunklist_w795739654.m3u8</streampoint>
+        <streampoint bitrate="777">http://104.171.245.24:1935/live/missiontv/playlist.m3u8</streampoint>
+        <!-- Original : -->
         <streampoint bitrate="420">http://streamer1.streamhost.org:1935/salive/GMImissiontvl/playlist.m3u8</streampoint>
         <streampoint bitrate="270">http://streamer1.streamhost.org:1935/salive/GMImissiontvh/playlist.m3u8</streampoint> <!-- TODO: why is this classified as high quality? -->
     </video-stream>

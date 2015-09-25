@@ -19,7 +19,7 @@
 <stream-list>
 
     <video-stream icon="flag_bo">
-        <name>Red ADvenir Bolivia</name>
+        <name>Red ADVenir Bolivia</name>
         <language>Spanish</language>
         <streampoint bitrate="214">http://streamer1.streamhost.org:1935/salive/GMIredadvenirl/playlist.m3u8</streampoint>
         <streampoint bitrate="592">http://streamer1.streamhost.org:1935/salive/GMIredadvenirm/playlist.m3u8</streampoint>
