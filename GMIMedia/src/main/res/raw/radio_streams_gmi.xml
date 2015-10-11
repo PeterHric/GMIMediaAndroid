@@ -22,8 +22,7 @@
         <name>Radio La Voz</name>
         <language>Spanish</language>
         <!-- OLD URL:  streampoint bitrate="32">http://ice.eleden.com:8000/lavoz106.aac</streampoint-->
-        <streampoint bitrate="1">http://wow.eleden.com/lavoz106/livestream/playlist.m3u8</streampoint>
-        <streampoint bitrate="2">http://wow.eleden.com:80/lavoz106/lavoz106.stream/playlist.m3u8</streampoint>
+        <streampoint bitrate="32">http://wow.eleden.com:80/lavoz106/lavoz106.stream/playlist.m3u8</streampoint>
     </audio-stream>
 
     <audio-stream icon="flag_gd">
@@ -36,9 +35,7 @@
         <name>Radio Altiplano</name>
         <language>Spanish</language>
         <streampoint bitrate="1">http://wow.eleden.com/altiplano/altiplano.stream/playlist.m3u8</streampoint>
-        <streampoint bitrate="2">http://wow.eleden.com/altiplano/altiplano.stream/chunklist_w345951025.m3u8</streampoint>
-        <!-- Original : -->
-        <streampoint bitrate="32">http://ice.eleden.com:8000/altiplano.aac</streampoint>
+        <!-- <streampoint bitrate="2">http://wow.eleden.com/altiplano/altiplano.stream/chunklist_w345951025.m3u8</streampoint> REDUNDANT -->
     </audio-stream>
 
     <audio-stream icon="flag_bo">

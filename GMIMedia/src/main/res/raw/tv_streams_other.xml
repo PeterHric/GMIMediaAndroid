@@ -18,6 +18,13 @@
 
 <stream-list>
 
+    <video-stream icon="flag_fl">
+        <name>Firstlight BN</name>
+        <language>English</language>
+        <streampoint bitrate="600">rtsp://streamer1.streamhost.org:1935/salive/GMIFLNL/</streampoint>
+        <streampoint bitrate="800">http://streamer1.streamhost.org:1935/salive/GMIFLNL/playlist.m3u8</streampoint>
+    </video-stream>
+
     <video-stream icon="flag_af">
         <name>Amazing Facts TV</name>
         <language>English</language>
@@ -27,12 +34,20 @@
     <video-stream icon="flag_us">
         <name>Mission TV USA</name>
         <language>English</language>
+        <!-- These 3 work, but are redundant
+        <streampoint bitrate="1">http://104.171.245.24:1935/live/missiontv/chunklist_w795739654.m3u8</streampoint>
+        <streampoint bitrate="2">http://104.171.245.24:1935/live/missiontv/playlist.m3u8</streampoint>
+        <streampoint bitrate="3">rtsp://104.171.245.24:1935/live/missiontv_1080p</streampoint>
+         -->
+        <streampoint bitrate="1900">http://104.171.245.24:1935/live/missiontv_1080p/playlist.m3u8</streampoint>
+        <streampoint bitrate="800">http://104.171.245.24:1935/live/missiontv_720p/playlist.m3u8</streampoint>
+        <streampoint bitrate="450">http://104.171.245.24:1935/live/missiontv_360p/playlist.m3u8</streampoint>
+        <streampoint bitrate="250">http://104.171.245.24:1935/live/missiontv_180p/playlist.m3u8</streampoint>
 
-        <streampoint bitrate="777">http://104.171.245.24:1935/live/missiontv/chunklist_w795739654.m3u8</streampoint>
-        <streampoint bitrate="777">http://104.171.245.24:1935/live/missiontv/playlist.m3u8</streampoint>
-        <!-- Original : -->
+        <!-- Original :
         <streampoint bitrate="420">http://streamer1.streamhost.org:1935/salive/GMImissiontvl/playlist.m3u8</streampoint>
-        <streampoint bitrate="270">http://streamer1.streamhost.org:1935/salive/GMImissiontvh/playlist.m3u8</streampoint> <!-- TODO: why is this classified as high quality? -->
+        <streampoint bitrate="270">http://streamer1.streamhost.org:1935/salive/GMImissiontvh/playlist.m3u8</streampoint>
+        -->
     </video-stream>
 
     <video-stream icon="flag_ad">
@@ -43,19 +58,20 @@
         <streampoint bitrate="200">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream3/playlist.m3u8</streampoint>
     </video-stream>
 
+    <!--
         <video-stream icon="flag_3abn">
             <name>3ABN</name>
             <language>English</language>
-            <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnEnglishF_3ABN_1200</streampoint>
+            <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnEnglishF_3ABN_1200/playlist.m3u8</streampoint>
         </video-stream>
 
 
         <video-stream icon="flag_3abn">
             <name>3ABN Kids</name>
             <language>English</language>
-            <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnSonBeam_3ABN_250</streampoint>
+            <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnSonBeam_3ABN_250/playlist.m3u8</streampoint>
         </video-stream>
-
+    -->
 
     <video-stream icon="flag_llbn">
         <name>LLBN TV - Arabic</name>
@@ -132,6 +148,7 @@
         <streampoint bitrate="250">http://streamer.uvcm.eu:1935/bm/family-250/playlist.m3u8</streampoint>
     </video-stream>
 
+    <!--
     <video-stream icon="flag_hope">
         <name>Hope TV América del Sur - Español</name>
         <language>Spanish</language>
@@ -186,5 +203,6 @@
         <language>English</language>
         <streampoint bitrate="550">http://bcoveliveios-i.akamaihd.net/hls/live/201459/753071706001-3/index.m3u8</streampoint>
     </video-stream>
+-->
 
 </stream-list>

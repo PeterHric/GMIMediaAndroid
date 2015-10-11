@@ -153,7 +153,8 @@ public class VideoPlayerActivity extends ActionBarActivity {
 
             progressDialog.setTitle(stream.getName());
             progressDialog.setMessage(getString(R.string.buffering));
-            progressDialog.setIndeterminate(false);
+            //progressDialog.setIndeterminate(false);
+            progressDialog.setIndeterminate(true);
 
             progressDialog.show();
         }

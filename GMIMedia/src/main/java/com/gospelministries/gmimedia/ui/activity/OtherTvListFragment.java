@@ -30,5 +30,5 @@ public class OtherTvListFragment extends AbstractStreamListFragment {
         return R.raw.tv_streams_other;
         }
 
-    public OtherTvListFragment() { }
+    //public OtherTvListFragment() { }
 }

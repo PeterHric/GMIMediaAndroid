@@ -17,11 +17,11 @@
 <resources>
 
     <!-- Application -->
-    <string name="app_name">GMIMedia</string>
+    <string name="app_name">GMI Media</string>
     <string name="gospel_ministries">Gospel Ministries</string>
 
     <!-- MainActivity -->
-    <string name="title_activity_main">GMIMedia</string>
+    <string name="title_activity_main">GMI Media</string>
 
     <!-- InfoActivity -->
     <string name="title_activity_info">Information</string>

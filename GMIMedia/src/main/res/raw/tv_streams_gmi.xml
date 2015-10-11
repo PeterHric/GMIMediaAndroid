@@ -40,11 +40,13 @@
         <streampoint bitrate="456">http://streamer1.streamhost.org:1935/salive/hungarian/playlist.m3u8</streampoint>
     </video-stream>
 
+    <!--
     <video-stream icon="flag_ro">
         <name>Light Channel Romania</name>
         <language>Romanian</language>
-        <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/romanian/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/romanian/playlist.m3u8</streampoint>
     </video-stream>
+    -->
 
     <video-stream icon="flag_de">
         <name>Light Channel Germany</name>
@@ -88,8 +90,21 @@
         <streampoint bitrate="1732">http://streamer1.streamhost.org:1935/salive/GMILightNLH/playlist.m3u8</streampoint>
     </video-stream>
 
-    <!-- Snoop Bulgarian Network -->
-    <!-- http://www.lightchannel.dk/ rtmp://streamer1.streamhost.org:1935/ -->
+
+    <video-stream icon="flag_dk">
+        <name>Light Channel Denmark</name>
+        <language>Dutch</language>
+        <streampoint bitrate="327">http://streamer1.streamhost.org:1935/salive/lcdk/playlist.m3u8</streampoint>
+    </video-stream>
+
+    <!-- Snoop Bulgarian Network
+    <video-stream icon="flag_dk">
+        <name>Light Channel Denmark</name>
+        <language>Dutch</language>
+        <streampoint bitrate="327">http://streamer1.streamhost.org:1935/salive/lcbg/playlist.m3u8</streampoint>
+    </video-stream>
+
+    http://www.lightchannel.bg/ rtmp://streamer1.streamhost.org:1935/ http://streamer1.streamhost.org:1935/salive/lcbg/playlist.m3u8 -->
 
     <video-stream icon="flag_ph">  <!-- ToDo: Long term off line - They stream other channels instead -->
         <name>HCBN Philippines</name>
@@ -97,28 +112,30 @@
         <streampoint bitrate="550">http://streamer1.streamhost.org:1935/salive/GMIhcbnh/playlist.m3u8</streampoint>
    </video-stream>
 
+<!--  Streams below do not work currently.
    <video-stream icon="flag_gd">
        <name>Global Family Network Grenada</name>
        <language>English</language>
-       <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMIgfnm/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
-        <streampoint bitrate="1000">http://streamer1.streamhost.org:1935/salive/GMIgfnh/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
+       <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMIgfnm/playlist.m3u8</streampoint>
+        <streampoint bitrate="1000">http://streamer1.streamhost.org:1935/salive/GMIgfnh/playlist.m3u8</streampoint>
     </video-stream>
+
 
     <video-stream icon="flag_ke">
         <name>2CBN Kenya</name>
         <language>English</language>
-        <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMI2cbnl/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
-        <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMI2cbnm/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
-        <streampoint bitrate="1000">http://streamer1.streamhost.org:1935/salive/GMI2cbnh/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMI2cbnl/playlist.m3u8</streampoint>
+        <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMI2cbnm/playlist.m3u8</streampoint>
+        <streampoint bitrate="1000">http://streamer1.streamhost.org:1935/salive/GMI2cbnh/playlist.m3u8</streampoint>
     </video-stream>
 
     <video-stream icon="flag_id">
         <name>HCBN Indonesia</name>
         <language>Bahasa Indonesia</language>
-        <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMIhcbnINlow/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
-        <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMIhcbnINmed/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
-        <streampoint bitrate="1000">http://streamer1.streamhost.org:1935/salive/GMIhcbnINhigh/playlist.m3u8</streampoint> <!-- TODO: bitrate, not found -->
+        <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMIhcbnINlow/playlist.m3u8</streampoint>
+        <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMIhcbnINmed/playlist.m3u8</streampoint>
+        <streampoint bitrate="1000">http://streamer1.streamhost.org:1935/salive/GMIhcbnINhigh/playlist.m3u8</streampoint>
     </video-stream>
-
+-->
 
 </stream-list>

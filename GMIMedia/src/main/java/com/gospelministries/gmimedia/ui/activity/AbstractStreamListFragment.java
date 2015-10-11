@@ -25,7 +25,7 @@ import android.view.*;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.TextView;
+// import android.widget.TextView;
 import com.gospelministries.gmimedia.R;
 import com.gospelministries.gmimedia.adapter.StreamArrayAdapter;
 import com.gospelministries.gmimedia.bean.Stream;
