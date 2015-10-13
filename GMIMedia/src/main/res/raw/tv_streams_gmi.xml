@@ -93,14 +93,14 @@
 
     <video-stream icon="flag_dk">
         <name>Light Channel Denmark</name>
-        <language>Dutch</language>
+        <language>Danish</language>
         <streampoint bitrate="327">http://streamer1.streamhost.org:1935/salive/lcdk/playlist.m3u8</streampoint>
     </video-stream>
 
     <!-- Snoop Bulgarian Network
-    <video-stream icon="flag_dk">
-        <name>Light Channel Denmark</name>
-        <language>Dutch</language>
+    <video-stream icon="flag_bg">
+        <name>Light Channel Bulgaria</name>
+        <language>Bulgarian</language>
         <streampoint bitrate="327">http://streamer1.streamhost.org:1935/salive/lcbg/playlist.m3u8</streampoint>
     </video-stream>
 

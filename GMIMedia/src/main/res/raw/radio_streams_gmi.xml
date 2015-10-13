@@ -34,7 +34,7 @@
     <audio-stream icon="flag_bo">
         <name>Radio Altiplano</name>
         <language>Spanish</language>
-        <streampoint bitrate="1">http://wow.eleden.com/altiplano/altiplano.stream/playlist.m3u8</streampoint>
+        <streampoint bitrate="32">http://wow.eleden.com/altiplano/altiplano.stream/playlist.m3u8</streampoint>
         <!-- <streampoint bitrate="2">http://wow.eleden.com/altiplano/altiplano.stream/chunklist_w345951025.m3u8</streampoint> REDUNDANT -->
     </audio-stream>
 

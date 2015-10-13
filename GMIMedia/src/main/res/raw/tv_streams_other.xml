@@ -58,6 +58,12 @@
         <streampoint bitrate="200">http://amazingdrtmp.tulix.tv:1935/amazingdiscoveries/mystream3/playlist.m3u8</streampoint>
     </video-stream>
 
+    <video-stream icon="smartlifestyle_tv">
+        <name>Smart Lifestyle TV</name>
+        <language>English</language>
+        <streampoint bitrate="500">http://telvuehls_t01587-i.akamaihd.net/hls/live/215638/T01587-slstv/playlist.m3u8</streampoint>
+    </video-stream>
+
     <!--
         <video-stream icon="flag_3abn">
             <name>3ABN</name>
@@ -72,6 +78,12 @@
             <streampoint bitrate="1300">http://brightcove03-f.akamaihd.net/3abnSonBeam_3ABN_250/playlist.m3u8</streampoint>
         </video-stream>
     -->
+
+    <video-stream icon="flag_llbn">
+        <name>LLBN TV - English</name>
+        <language>English</language>
+        <streampoint bitrate="500">http://telvuehls_t01587-i.akamaihd.net/hls/live/215634/T01587-english/playlist.m3u8</streampoint>
+    </video-stream>
 
     <video-stream icon="flag_llbn">
         <name>LLBN TV - Arabic</name>
@@ -101,6 +113,12 @@
         <streampoint bitrate="400">http://telvuehls_t01587-i.akamaihd.net/hls/live/215635/T01587-latino2/playlist_1.m3u8</streampoint>
         <streampoint bitrate="800">http://telvuehls_t01587-i.akamaihd.net/hls/live/215635/T01587-latino2/playlist_2.m3u8</streampoint>
         <streampoint bitrate="1200">http://telvuehls_t01587-i.akamaihd.net/hls/live/215635/T01587-latino2/playlist_3.m3u8</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_llbn">
+        <name>LLBN TV - Korea</name>
+        <language>Korean</language>   NOT WORKING !!!
+        <streampoint bitrate="500">http://telvuehls_t01587-i.akamaihd.net/hls/live/223205/T01587-korea/playlist.m3u8</streampoint>
     </video-stream>
 
     <video-stream icon="flag_ru">
@@ -201,7 +219,8 @@
     <video-stream icon="flag_hope">
         <name>Hope Church TV - English</name>
         <language>English</language>
-        <streampoint bitrate="550">http://bcoveliveios-i.akamaihd.net/hls/live/201459/753071706001-3/index.m3u8</streampoint>
+        BAD: <streampoint bitrate="550">http://bcoveliveios-i.akamaihd.net/hls/live/201459/753071706001-3/index.m3u8</streampoint>
+        <streampoint bitrate="550">http://amsix17.streamkit.tv:80/edge/_definst_/hcd_200/chunklist.m3u8</streampoint>
     </video-stream>
 -->
 
