@@ -28,7 +28,8 @@
     <audio-stream icon="flag_gd">
         <name>Global Family Network Radio</name>
         <language>English</language>
-        <streampoint bitrate="32">http://ice.eleden.com:8000/tgfnradio.aac</streampoint>
+        <!-- OLD URL:  <streampoint bitrate="32">http://ice.eleden.com:8000/tgfnradio.aac</streampoint> -->
+        <streampoint bitrate="32">http://wow.eleden.com/tgfnradio/tgfnradio.stream/playlist.m3u8</streampoint>
     </audio-stream>
 
     <audio-stream icon="flag_bo">
@@ -41,13 +42,15 @@
     <audio-stream icon="flag_bo">
         <name>Radio ADVenir</name>
         <language>Spanish</language>
-        <streampoint bitrate="32">http://ice.eleden.com:8000/radioadvenir.aac</streampoint>
+        <!-- OLD URL: <streampoint bitrate="32">http://ice.eleden.com:8000/radioadvenir.aac</streampoint> -->
+        <streampoint bitrate="32">http://wow.eleden.com/radioadvenir/radioadvenir.stream/playlist.m3u8</streampoint>
     </audio-stream>
 
     <audio-stream icon="flag_br">
         <name>Terceiro Anjo</name>
         <language>Portuguese</language>
-        <streampoint bitrate="96">rtsp://streamer1.streamhost.org:1935/salive/GMI3anjoa</streampoint>
+        <!-- <streampoint bitrate="96">rtsp://streamer1.streamhost.org:1935/salive/GMI3anjoa</streampoint> -->
+        <streampoint bitrate="96">http://streamer1.streamhost.org:1935/salive/GMI3anjoa/playlist.m3u8</streampoint>
     </audio-stream>
 
 </stream-list>
