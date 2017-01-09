@@ -4,8 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GMIMedia/GMIMedia.iml" filepath="$PROJECT_DIR$/GMIMedia/GMIMedia.iml" />
       <module fileurl="file://$PROJECT_DIR$/GMIMediaAndroid.iml" filepath="$PROJECT_DIR$/GMIMediaAndroid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/trunk.iml" filepath="$PROJECT_DIR$/trunk.iml" />
     </modules>
   </component>
 </project>
-

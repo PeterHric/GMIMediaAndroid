@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.12.1'
+        classpath 'com.android.tools.build:gradle:2.2.3'
         // classpath 'com.alexvasilkov:android-sign-release:0.3.+'
     }
 }
@@ -58,7 +58,8 @@ android {
         release {
             // TODO: enable proguard
             //       simplexml needs some rules for the build to compile
-            runProguard false
+            // runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
             //signingConfig signingConfigs.release
         }
