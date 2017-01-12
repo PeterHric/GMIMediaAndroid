@@ -16,7 +16,9 @@ repositories {
     mavenCentral()
 
     maven {
-        url "https://repo.commonsware.com.s3.amazonaws.com"
+        // url "https://repo.commonsware.com.s3.amazonaws.com"
+        url "https://maven.fabric.io/public"
+
     }
 }
 
@@ -27,7 +29,7 @@ task versionInfo {
     ext.versionName = file('../VERSION').text.trim()
     ext.gitTags = 'git tags'.execute().text.trim()
     //ext.versionCode     = ext.gitTags.split(System.getProperty("line.separator")).length
-    ext.versionCode = 4
+    ext.versionCode = 5
     ext.versionFullName = "${ext.versionName}.${ext.versionRevision}"
 
     println "Version Revision:  ${ext.versionRevision}"
@@ -37,12 +39,13 @@ task versionInfo {
 }
 
 android {
-    compileSdkVersion 20
-    buildToolsVersion '20'
+    compileSdkVersion 21
+    buildToolsVersion '21'
 
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 20
+        //minSdkVersion 11
+        targetSdkVersion 21
         versionCode versionInfo.versionCode
         versionName versionInfo.versionName
     }
@@ -78,6 +81,6 @@ dependencies {
         exclude module: 'stax-api'
         exclude module: 'xpp3'
     }
-    compile 'com.android.support:support-v4:20.0.0'
-    compile 'com.android.support:appcompat-v7:20.0.0'
+    compile 'com.android.support:support-v4:21.0.0'
+    compile 'com.android.support:appcompat-v7:21.0.0'
 }

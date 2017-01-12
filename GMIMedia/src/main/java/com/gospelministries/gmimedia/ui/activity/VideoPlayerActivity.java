@@ -16,10 +16,10 @@
 
 package com.gospelministries.gmimedia.ui.activity;
 
+import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
@@ -28,11 +28,14 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
 import com.gospelministries.gmimedia.R;
 import com.gospelministries.gmimedia.bean.Stream;
 
+import static android.view.View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
 import static com.gospelministries.gmimedia.util.Constants.TAG_POSITION;
 
 /**
@@ -62,10 +65,21 @@ public class VideoPlayerActivity extends ActionBarActivity {
      */
     private int position;
 
+    /**
+     * Flag to denote fullscreen status of the activity
+     */
+    private boolean _fullScreen = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_player);
+
+        // ------------------------------------
+        // -------- Make it Full Screen -------
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // ------------------------------------
+        _fullScreen = true;
 
         // find view elements
         videoView = (VideoView) findViewById(R.id.video_view);
@@ -92,7 +106,7 @@ public class VideoPlayerActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_full_screen:
-                toggleFullScreen();
+                toggleFullScreen(null);
                 return true;
 
             case R.id.action_mute_audio:
@@ -110,18 +124,28 @@ public class VideoPlayerActivity extends ActionBarActivity {
     /**
      * Toggles the full screen.
      */
-    public void toggleFullScreen() {
-        // TODO: implement
-//        Window w = getWindow();
-//
-//        //Window winHnd = this.getWindow();
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        w.setFlags(w.getAttributes().FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-    }
+    public void toggleFullScreen(View v) {
 
-    //@Override
-    public void fullScreen()
-    {}
+        if(_fullScreen) {
+            // -------- Quit Full Screen mode -------
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            // ------------------------------------
+            // ToDo: Try these: SYSTEM_UI_FLAG_IMMERSIVE_STICKY | SYSTEM_UI_FLAG_IMMERSIVE | SYSTEM_UI_FLAG_FULLSCREEN | SYSTEM_UI_FLAG_HIDE_NAVIGATION
+            //getWindow().setFlags(WindowManager.LayoutParams.SYSTEM_UI_FLAG_IMMERSIVE_STICKY, WindowManager.LayoutParams.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+            //v.setSystemUiVisibility(SYSTEM_UI_FLAG_IMMERSIVE_STICKY);  // Requires min SDK: 11 now: 7
+            // More info see this: https://developer.android.com/reference/android/view/View.html#SYSTEM_UI_FLAG_IMMERSIVE
+            _fullScreen = false;
+        }  else {
+
+            // -------- Make it Full Screen -------
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            // ------------------------------------
+            _fullScreen = true;
+        }
+
+        //ActionBar actionBar = getSupportActionBar();
+
+    }
 
     /**
      * Toggles the audio.
