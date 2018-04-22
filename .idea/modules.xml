@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GMI.iml" filepath="$PROJECT_DIR$/GMI.iml" />
       <module fileurl="file://$PROJECT_DIR$/GMIMedia/GMIMedia.iml" filepath="$PROJECT_DIR$/GMIMedia/GMIMedia.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GMIMediaAndroid.iml" filepath="$PROJECT_DIR$/GMIMediaAndroid.iml" />
     </modules>
   </component>
 </project>
