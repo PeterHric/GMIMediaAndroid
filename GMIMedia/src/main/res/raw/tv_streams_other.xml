@@ -21,7 +21,7 @@
     <video-stream icon="flag_fl">
         <name>Firstlight BN</name>
         <language>English</language>
-        <streampoint bitrate="600">rtsp://streamer1.streamhost.org:1935/salive/GMIFLNL/</streampoint>
+        <!-- <streampoint bitrate="600">rtsp://streamer1.streamhost.org:1935/salive/GMIFLNL/</streampoint> -->
         <streampoint bitrate="800">http://streamer1.streamhost.org:1935/salive/GMIFLNL/playlist.m3u8</streampoint>
     </video-stream>
 
@@ -119,6 +119,14 @@
         <name>LLBN TV - Korea</name>
         <language>Korean</language>   NOT WORKING !!!
         <streampoint bitrate="500">http://telvuehls_t01587-i.akamaihd.net/hls/live/223205/T01587-korea/playlist.m3u8</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_es">
+        <name>Logos TV</name>
+        <language>Spanish</language>
+        <!-- <streampoint bitrate="110">http://streamer1.streamhost.org:1935/salive/GMIalfal/playlist.m3u8</streampoint> -->
+        <streampoint bitrate="310">http://streamer1.streamhost.org:1935/salive/GMIalfam/playlist.m3u8</streampoint>
+        <streampoint bitrate="764">http://streamer1.streamhost.org:1935/salive/GMIalfah/playlist.m3u8</streampoint>
     </video-stream>
 
     <video-stream icon="flag_ru">

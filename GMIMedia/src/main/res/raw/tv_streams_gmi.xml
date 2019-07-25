@@ -26,14 +26,6 @@
         <streampoint bitrate="1247">http://streamer1.streamhost.org:1935/salive/GMIredadvenirh/playlist.m3u8</streampoint>
     </video-stream>
 
-    <video-stream icon="flag_es">
-        <name>Alfa Televisión España</name>
-        <language>Spanish</language>
-        <streampoint bitrate="110">http://streamer1.streamhost.org:1935/salive/GMIalfal/playlist.m3u8</streampoint>
-        <streampoint bitrate="310">http://streamer1.streamhost.org:1935/salive/GMIalfam/playlist.m3u8</streampoint>
-        <streampoint bitrate="764">http://streamer1.streamhost.org:1935/salive/GMIalfah/playlist.m3u8</streampoint>
-    </video-stream>
-
     <video-stream icon="flag_hu">
         <name>Light Channel Hungary</name>
         <language>Hungarian</language>
