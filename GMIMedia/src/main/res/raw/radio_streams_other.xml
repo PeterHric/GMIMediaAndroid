@@ -24,6 +24,12 @@
         <streampoint bitrate="128">http://war.str3am.com:7180/live</streampoint>
     </audio-stream>
 
+    <audio-stream icon="flag_es">
+        <name>Radio Adelante</name>
+        <language>Spanish</language>
+        <streampoint bitrate="32">http://cdn.instream.audio:9102/stream</streampoint>
+    </audio-stream>
+
     <audio-stream icon="flag_ve">
         <name>Radio La Voz</name>
         <language>Spanish</language>
@@ -31,6 +37,7 @@
         <streampoint bitrate="32">http://wow.eleden.com:80/lavoz106/lavoz106.stream/playlist.m3u8</streampoint>
     </audio-stream>
 
+    <!--
     <audio-stream icon="flag_ru">
         <name>Христианское радио 'Библейский маяк'</name>
         <language>Russian</language>
@@ -38,5 +45,6 @@
         <streampoint bitrate="64">http://streamer.uvcm.eu:8080/bm-64</streampoint>
         <streampoint bitrate="32">http://streamer.uvcm.eu:8080/bm-32</streampoint>
     </audio-stream>
+    -->
 
 </stream-list>

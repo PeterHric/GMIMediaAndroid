@@ -26,6 +26,19 @@
         <streampoint bitrate="1247">http://streamer1.streamhost.org:1935/salive/GMIredadvenirh/playlist.m3u8</streampoint>
     </video-stream>
 
+    <video-stream icon="flag_us">
+        <name>Frontlines TV English</name>
+        <language>English</language>
+        <streampoint bitrate="100">https://streamer1.streamhost.org:1935/salive/GMIfltvH/playlist.m3u8</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_us">
+        <name>Moments of preace TV</name>
+        <language>English</language>
+        <streampoint bitrate="500">https://streamer1.streamhost.org:1935/salive/GMImoptvM/playlist.m3u8</streampoint>
+        <streampoint bitrate="1000">https://streamer1.streamhost.org:1935/salive/GMImoptvH/playlist.m3u8</streampoint>
+    </video-stream>
+
     <video-stream icon="flag_hu">
         <name>Light Channel Hungary</name>
         <language>Hungarian</language>
@@ -50,7 +63,7 @@
         <name>Terceiro Anjo Brasil</name>
         <language>Portuguese</language>
         <!-- <streampoint bitrate="250">http://streamer1.streamhost.org:1935/salive/GMI3anjol/playlist.m3u8</streampoint> --> <!-- TODO: Stream NOT found -->
-        <streampoint bitrate="313">http://streamer1.streamhost.org:1935/salive/GMI3anjom/playlist.m3u8</streampoint>
+        <!-- <streampoint bitrate="313">http://streamer1.streamhost.org:1935/salive/GMI3anjom/playlist.m3u8</streampoint> -->
         <streampoint bitrate="517">http://streamer1.streamhost.org:1935/salive/GMI3anjoh/playlist.m3u8</streampoint>
     </video-stream>
 
@@ -74,6 +87,20 @@
         <streampoint bitrate="640">http://streamer1.streamhost.org:1935/salive/lctvcz/playlist.m3u8</streampoint>
     </video-stream>
 
+    <video-stream icon="flag_bg">
+        <name>Light Channel Bulgaria</name>
+        <language>Bulgarian</language>
+        <streampoint bitrate="327">http://streamer1.streamhost.org:1935/salive/GMIlcbgM/playlist.m3u8</streampoint>
+    </video-stream>
+
+    <video-stream icon="flag_dk">
+        <name>Light Channel Denmark</name>
+        <language>Danish</language>
+        <streampoint bitrate="100">rtmp://100.98.128.244/live/Revelation14SDA/playlist.m3u8</streampoint>
+    </video-stream>
+
+<!--  Streams below do not work currently.
+
     <video-stream icon="flag_nl">
         <name>Light Channel Nederlanden</name>
         <language>Dutch</language>
@@ -82,36 +109,18 @@
         <streampoint bitrate="1732">http://streamer1.streamhost.org:1935/salive/GMILightNLH/playlist.m3u8</streampoint>
     </video-stream>
 
-
-    <video-stream icon="flag_dk">
-        <name>Light Channel Denmark</name>
-        <language>Danish</language>
-        <streampoint bitrate="327">http://streamer1.streamhost.org:1935/salive/lcdk/playlist.m3u8</streampoint>
-    </video-stream>
-
-    <!-- Snoop Bulgarian Network
-    <video-stream icon="flag_bg">
-        <name>Light Channel Bulgaria</name>
-        <language>Bulgarian</language>
-        <streampoint bitrate="327">http://streamer1.streamhost.org:1935/salive/lcbg/playlist.m3u8</streampoint>
-    </video-stream>
-
-    http://www.lightchannel.bg/ rtmp://streamer1.streamhost.org:1935/ http://streamer1.streamhost.org:1935/salive/lcbg/playlist.m3u8 -->
-
-    <video-stream icon="flag_ph">  <!-- ToDo: Long term off line - They stream other channels instead -->
+    <video-stream icon="flag_ph">
         <name>HCBN Philippines</name>
         <language>English</language>
         <streampoint bitrate="550">http://streamer1.streamhost.org:1935/salive/GMIhcbnh/playlist.m3u8</streampoint>
-   </video-stream>
+    </video-stream>
 
-<!--  Streams below do not work currently.
    <video-stream icon="flag_gd">
        <name>Global Family Network Grenada</name>
        <language>English</language>
        <streampoint bitrate="500">http://streamer1.streamhost.org:1935/salive/GMIgfnm/playlist.m3u8</streampoint>
         <streampoint bitrate="1000">http://streamer1.streamhost.org:1935/salive/GMIgfnh/playlist.m3u8</streampoint>
     </video-stream>
-
 
     <video-stream icon="flag_ke">
         <name>2CBN Kenya</name>

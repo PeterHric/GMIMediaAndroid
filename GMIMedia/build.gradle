@@ -38,7 +38,7 @@ task versionInfo {
     ext.versionName = file('../VERSION').text.trim()
     ext.gitTags = 'git tags'.execute().text.trim()
     //ext.versionCode     = ext.gitTags.split(System.getProperty("line.separator")).length
-    ext.versionCode = 5
+    ext.versionCode = 7
     ext.versionFullName = "${ext.versionName}.${ext.versionRevision}"
 
     println "Version Revision:  ${ext.versionRevision}"
@@ -48,13 +48,12 @@ task versionInfo {
 }
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 7
         //minSdkVersion 11
-        targetSdkVersion 24
+        targetSdkVersion 27
         versionCode versionInfo.versionCode
         versionName versionInfo.versionName
     }
@@ -70,7 +69,7 @@ android {
         release {
             // TODO: enable proguard
             //       simplexml needs some rules for the build to compile
-            // runProguard false
+            // runProguard true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.txt'
             //signingConfig signingConfigs.release
